@@ -1,0 +1,28 @@
+{
+  "TCRMService": {
+    "@schemaLocation": "http://www.ibm.com/mdm/schema MDMDomains.xsd",
+    "RequestControl": {
+      "requestID": "10015",
+      "DWLControl": {
+        "requesterName": "cusadmin",
+        "requesterLanguage": "100"
+      }
+    },
+    "TCRMTx": {
+      "TCRMTxType": "SearchCustomerByIdentifierDetails",
+      "TCRMTxObject": "KeyPartySearchBObj",
+      "TCRMObject": {
+        "KeyPartySearchBObj": {
+          "PartyInquiryLevel": "0",
+          "MaxReturn": "100",
+          "KeyOrganizationSearchBObj": 
+          { 
+          	"OrganizationName": "SSC CORP" 
+          }
+
+        }
+      }
+    }
+  }
+}
+

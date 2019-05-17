@@ -1,0 +1,11 @@
+https://stackoverflow.com/questions/43536035/json-to-json-transform-of-input-sample-using-any-existing-java-library-tools
+
+
+https://stackoverflow.com/questions/37865871/how-do-i-transform-an-array-using-jolt
+
+
+https://www.hascode.com/2017/01/transforming-and-reducing-json-structures-with-jolt/
+
+https://www.javatips.net/api/jolt-master/json-utils/src/main/java/com/bazaarvoice/jolt/JsonUtils.java
+
+
