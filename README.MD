@@ -1,4 +1,24 @@
+
+Make sure that ActiveMQ up and running.
+Should have below queues.
+
+IN
+OUT_2
+
+
+Build all services with below command:
+
+cd apache-router
+cd KeyBankProfileService
+cd MDMService
+
 mvn clean install -DskipTests
+
+
+Run all service.
+
+Hit the below url.
+
 
 http://localhost:8082/keybank/api/swagger-ui.html#!/profile-controller/processProfileDetailsUsingPOST
 
