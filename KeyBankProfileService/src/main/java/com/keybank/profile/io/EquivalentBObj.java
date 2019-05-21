@@ -1,14 +1,12 @@
 package com.keybank.profile.io;
 
 import java.io.Serializable;
-import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -17,17 +15,14 @@ import lombok.NoArgsConstructor;
 @JsonIgnoreProperties(ignoreUnknown=true)
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
-public class QueueResponse implements Serializable {
-
+public class EquivalentBObj implements Serializable{
+	
 	private static final long serialVersionUID = 1L;
 	
-	private List<String> companyId;
-	private List<String> companyStatus;
-	private List<String> companyName;
-	private List<String> companyCity;
-	private List<String> companyState;
-	private List<EquivalentBObj> EquivalentBObj;
-	
-	
+	private String ComponentID;
+	private String AdminSystemType;
+	private String AdminSystemValue;
+	private String AdminPartyId;
+	private String StartDate;
+	private String EndDate;
 }

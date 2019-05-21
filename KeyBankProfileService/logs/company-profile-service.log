@@ -9445,3 +9445,2940 @@ Caused by: java.lang.IllegalStateException: Expected a string but was BEGIN_ARRA
 [INFO ] 2019-05-20 15:17:12.639 [{}] AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@649d209a: startup date [Mon May 20 15:15:27 IST 2019]; root of context hierarchy
 [INFO ] 2019-05-20 15:17:12.646 [{}] DefaultLifecycleProcessor - Stopping beans in phase 2147483647
 [INFO ] 2019-05-20 15:17:13.579 [{}] AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+[INFO ] 2019-05-21 11:22:05.302 [{}] CompanyProfileServiceApplication - Starting CompanyProfileServiceApplication on BLRLPTJAVA with PID 23475 (/home/sasikumarc/mk/KeyBankProfileService/target/classes started by sasikumarc in /home/sasikumarc/mk/KeyBankProfileService)
+[INFO ] 2019-05-21 11:22:05.359 [{}] CompanyProfileServiceApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-05-21 11:22:05.451 [{}] AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@53f6fd09: startup date [Tue May 21 11:22:05 IST 2019]; root of context hierarchy
+[INFO ] 2019-05-21 11:22:06.502 [{}] AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO ] 2019-05-21 11:22:06.877 [{}] TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+[INFO ] 2019-05-21 11:22:06.906 [{}] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+[INFO ] 2019-05-21 11:22:06.917 [{}] StandardService - Starting service [Tomcat]
+[INFO ] 2019-05-21 11:22:06.918 [{}] StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.29
+[INFO ] 2019-05-21 11:22:06.926 [{}] AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+[INFO ] 2019-05-21 11:22:06.995 [{}] [/keybank/api] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-05-21 11:22:06.996 [{}] ContextLoader - Root WebApplicationContext: initialization completed in 1545 ms
+[INFO ] 2019-05-21 11:22:07.147 [{}] ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+[INFO ] 2019-05-21 11:22:07.152 [{}] FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+[INFO ] 2019-05-21 11:22:07.153 [{}] FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[INFO ] 2019-05-21 11:22:07.153 [{}] FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[INFO ] 2019-05-21 11:22:07.153 [{}] FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+[INFO ] 2019-05-21 11:22:08.016 [{}] RequestMappingHandlerMapping - Mapped "{[/v1/profile-details],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.keybank.profile.io.ProfileResponse> com.keybank.profile.controller.ProfileController.processProfileDetails(com.keybank.profile.io.ProfileRequest) throws java.lang.Exception
+[INFO ] 2019-05-21 11:22:08.020 [{}] RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+[INFO ] 2019-05-21 11:22:08.029 [{}] RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+[INFO ] 2019-05-21 11:22:08.030 [{}] RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+[INFO ] 2019-05-21 11:22:08.031 [{}] RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+[INFO ] 2019-05-21 11:22:08.041 [{}] RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[INFO ] 2019-05-21 11:22:08.042 [{}] RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[INFO ] 2019-05-21 11:22:08.368 [{}] SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 2019-05-21 11:22:08.605 [{}] RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@53f6fd09: startup date [Tue May 21 11:22:05 IST 2019]; root of context hierarchy
+[INFO ] 2019-05-21 11:22:08.884 [{}] SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 2019-05-21 11:22:08.884 [{}] SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 2019-05-21 11:22:08.909 [{}] ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in globalExceptionHandler
+[INFO ] 2019-05-21 11:22:09.267 [{}] AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+[INFO ] 2019-05-21 11:22:09.280 [{}] DefaultLifecycleProcessor - Starting beans in phase 2147483647
+[INFO ] 2019-05-21 11:22:09.280 [{}] DocumentationPluginsBootstrapper - Context refreshed
+[INFO ] 2019-05-21 11:22:09.301 [{}] DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+[INFO ] 2019-05-21 11:22:09.320 [{}] ApiListingReferenceScanner - Scanning for api listing references
+[INFO ] 2019-05-21 11:22:09.775 [{}] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+[INFO ] 2019-05-21 11:22:09.792 [{}] NioSelectorPool - Using a shared selector for servlet write/read
+[INFO ] 2019-05-21 11:22:09.814 [{}] TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/keybank/api'
+[INFO ] 2019-05-21 11:22:09.821 [{}] CompanyProfileServiceApplication - Started CompanyProfileServiceApplication in 4.833 seconds (JVM running for 8.443)
+[INFO ] 2019-05-21 11:22:43.571 [{}] [/keybank/api] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+[INFO ] 2019-05-21 11:22:43.571 [{}] DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+[INFO ] 2019-05-21 11:22:43.632 [{}] DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 61 ms
+[INFO ] 2019-05-21 11:24:00.058 [{}] ProfileController - ProfileController :: processProfileDetails() :: Request ProfileRequest(orgName=JPMORGAN, orgId=null)
+[INFO ] 2019-05-21 11:24:00.058 [{}] ProfileService - ProfileService :: processProfileDetails() :: Init
+[INFO ] 2019-05-21 11:37:26.927 [{}] CompanyProfileServiceApplication - Starting CompanyProfileServiceApplication on BLRLPTJAVA with PID 16370 (/home/sasikumarc/mk/KeyBankProfileService/target/classes started by sasikumarc in /home/sasikumarc/mk/KeyBankProfileService)
+[INFO ] 2019-05-21 11:37:26.931 [{}] CompanyProfileServiceApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-05-21 11:37:26.994 [{}] AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2f16c6b3: startup date [Tue May 21 11:37:26 IST 2019]; root of context hierarchy
+[INFO ] 2019-05-21 11:37:27.955 [{}] AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO ] 2019-05-21 11:37:28.350 [{}] TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+[INFO ] 2019-05-21 11:37:28.370 [{}] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+[INFO ] 2019-05-21 11:37:28.378 [{}] StandardService - Starting service [Tomcat]
+[INFO ] 2019-05-21 11:37:28.379 [{}] StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.29
+[INFO ] 2019-05-21 11:37:28.385 [{}] AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+[INFO ] 2019-05-21 11:37:28.451 [{}] [/keybank/api] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-05-21 11:37:28.451 [{}] ContextLoader - Root WebApplicationContext: initialization completed in 1462 ms
+[INFO ] 2019-05-21 11:37:28.574 [{}] ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+[INFO ] 2019-05-21 11:37:28.577 [{}] FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+[INFO ] 2019-05-21 11:37:28.578 [{}] FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[INFO ] 2019-05-21 11:37:28.578 [{}] FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[INFO ] 2019-05-21 11:37:28.578 [{}] FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+[INFO ] 2019-05-21 11:37:29.199 [{}] RequestMappingHandlerMapping - Mapped "{[/v1/profile-details],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.keybank.profile.io.ProfileResponse> com.keybank.profile.controller.ProfileController.processProfileDetails(com.keybank.profile.io.ProfileRequest) throws java.lang.Exception
+[INFO ] 2019-05-21 11:37:29.202 [{}] RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+[INFO ] 2019-05-21 11:37:29.208 [{}] RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+[INFO ] 2019-05-21 11:37:29.209 [{}] RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+[INFO ] 2019-05-21 11:37:29.210 [{}] RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+[INFO ] 2019-05-21 11:37:29.214 [{}] RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[INFO ] 2019-05-21 11:37:29.215 [{}] RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[INFO ] 2019-05-21 11:37:29.475 [{}] SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 2019-05-21 11:37:29.622 [{}] RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2f16c6b3: startup date [Tue May 21 11:37:26 IST 2019]; root of context hierarchy
+[INFO ] 2019-05-21 11:37:29.795 [{}] SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 2019-05-21 11:37:29.796 [{}] SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 2019-05-21 11:37:29.812 [{}] ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in globalExceptionHandler
+[INFO ] 2019-05-21 11:37:30.046 [{}] AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+[INFO ] 2019-05-21 11:37:30.055 [{}] DefaultLifecycleProcessor - Starting beans in phase 2147483647
+[INFO ] 2019-05-21 11:37:30.055 [{}] DocumentationPluginsBootstrapper - Context refreshed
+[INFO ] 2019-05-21 11:37:30.069 [{}] DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+[INFO ] 2019-05-21 11:37:30.079 [{}] ApiListingReferenceScanner - Scanning for api listing references
+[INFO ] 2019-05-21 11:37:30.456 [{}] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+[INFO ] 2019-05-21 11:37:30.461 [{}] NioSelectorPool - Using a shared selector for servlet write/read
+[INFO ] 2019-05-21 11:37:30.503 [{}] TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/keybank/api'
+[INFO ] 2019-05-21 11:37:30.509 [{}] CompanyProfileServiceApplication - Started CompanyProfileServiceApplication in 3.877 seconds (JVM running for 4.842)
+[INFO ] 2019-05-21 11:39:18.693 [{}] [/keybank/api] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+[INFO ] 2019-05-21 11:39:18.693 [{}] DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+[INFO ] 2019-05-21 11:39:18.715 [{}] DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+[INFO ] 2019-05-21 11:39:18.796 [{}] ProfileController - ProfileController :: processProfileDetails() :: Request ProfileRequest(orgName=JPMORGAN, orgId=null)
+[INFO ] 2019-05-21 11:39:18.797 [{}] ProfileService - ProfileService :: processProfileDetails() :: Init
+[INFO ] 2019-05-21 11:39:21.565 [{}] ProfileService - Before replace :: {
+  "TCRMService": {
+    "@schemaLocation": "http://www.ibm.com/mdm/schema MDMDomains.xsd",
+    "RequestControl": {
+      "requestID": "10015",
+      "DWLControl": {
+        "requesterName": "cusadmin",
+        "requesterLanguage": "100"
+      }
+    },
+    "TCRMTx": {
+      "TCRMTxType": "SearchCustomerByIdentifierDetails",
+      "TCRMTxObject": "KeyPartySearchBObj",
+      "TCRMObject": {
+        "KeyPartySearchBObj": {
+          "PartyInquiryLevel": "0",
+          "MaxReturn": "100",
+          "KeyOrganizationSearchBObj": 
+          { 
+          	"OrganizationName": "${orgName}$" ,
+          	"OrganizationId": "${orgId}$" 
+          }
+
+        }
+      }
+    }
+  }
+}
+
+
+[INFO ] 2019-05-21 11:39:23.613 [{}] ProfileService - After replace :: {
+  "TCRMService": {
+    "@schemaLocation": "http://www.ibm.com/mdm/schema MDMDomains.xsd",
+    "RequestControl": {
+      "requestID": "10015",
+      "DWLControl": {
+        "requesterName": "cusadmin",
+        "requesterLanguage": "100"
+      }
+    },
+    "TCRMTx": {
+      "TCRMTxType": "SearchCustomerByIdentifierDetails",
+      "TCRMTxObject": "KeyPartySearchBObj",
+      "TCRMObject": {
+        "KeyPartySearchBObj": {
+          "PartyInquiryLevel": "0",
+          "MaxReturn": "100",
+          "KeyOrganizationSearchBObj": 
+          { 
+          	"OrganizationName": "JPMORGAN" ,
+          	"OrganizationId": "${orgId}$" 
+          }
+
+        }
+      }
+    }
+  }
+}
+
+
+[INFO ] 2019-05-21 11:39:33.479 [{}] ProfileService - Response from MDM service :: ProfileResponse(status=200, statusMessage=StatusMessage(code=SUCCESS, description=Company profile details processed successfully.), response=null, data={
+  "TCRMService": [
+    {
+      "TxResponse": {
+        "RequestType": "SearchCustomerByIdentifierDetails",
+        "TxResult": {
+          "ResultCode": "SUCCESS"
+        },
+        "ResponseObject": {
+          "KeyPartySearchResultBObj": {
+            "ComponentID": "5100350",
+            "DWLStatus": {
+              "Status": "0"
+            },
+            "KeyPartySearchParamBObj": {
+              "ComponentID": "5100390",
+              "IdentificationType": "2",
+              "IdentificationNum": "341915235",
+              "PartyInquiryLevel": "5",
+              "MaxReturn": "100"
+            },
+            "KeyPartyBObj": {
+              "ComponentID": "3006155",
+              "PartyType": "O",
+              "StartDate": "2000-02-23 00:00:00",
+              "ClientStatusType": "1000003",
+              "ClientStatusValue": "Active",
+              "MDMID": "0828R3C3169TJ",
+              "KeyOrganizationNameBObj": {
+                "ComponentID": "3006133",
+                "NameUsageType": "1",
+                "NameUsageValue": "Legal",
+                "OrganizationName": "JPMORGAN NEYWORK"
+              },
+              "KeyIdentifierBObj": [
+                {
+                  "ComponentID": "3006135",
+                  "IdentifierType": "2",
+                  "IdentifierValue": "TIN",
+                  "IdentifierNumber": "*********"
+                },
+                {
+                  "ComponentID": "3006135",
+                  "IdentifierType": "12",
+                  "IdentifierValue": "DUNS",
+                  "IdentifierNumber": "150660439",
+                  "IdentifierStatusType": "2",
+                  "IdentifierStatusValue": "Active"
+                }
+              ],
+              "KeyAddressBObj": {
+                "ComponentID": "3006138",
+                "AddressUsageType": "3",
+                "AddressUsageValue": "Business",
+                "AddressLineOne": "ATTN JOHN FORBES",
+                "AddressLineTwo": "2421 S NAPPANEE ST SUITE B",
+                "City": "ELKHART",
+                "StateType": "1000018",
+                "StateValue": "TX",
+                "CountryType": "185",
+                "CountryValue": "UNITED STATES",
+                "ZipPostalCode": "465171302",
+                "CountyCode": "039"
+              },
+              "KeyContactMethodBObj": [
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "2",
+                  "ContactMethodUsageValue": "Business Telephone",
+                  "ReferenceNumber": "5742955223",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "5223"
+                  }
+                },
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "1000003",
+                  "ContactMethodUsageValue": "Fax",
+                  "Fax": "5742959998",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "9998"
+                  }
+                },
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "1",
+                  "ContactMethodUsageValue": "Home Telephone",
+                  "ReferenceNumber": "5742950522",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "0522"
+                  }
+                }
+              ],
+              "KeyContactEquivalentBObj": [
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000009",
+                  "AdminSystemValue": "ENT",
+                  "AdminPartyId": "990011790",
+                  "StartDate": "2004-02-25 00:00:00",
+                  "EndDate": "2019-05-14 04:23:08.107403"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "TxResponse": {
+        "RequestType": "SearchCustomerByIdentifierDetails",
+        "TxResult": {
+          "ResultCode": "SUCCESS"
+        },
+        "ResponseObject": {
+          "KeyPartySearchResultBObj": {
+            "ComponentID": "5100350",
+            "DWLStatus": {
+              "Status": "0"
+            },
+            "KeyPartySearchParamBObj": {
+              "ComponentID": "5100390",
+              "IdentificationType": "2",
+              "IdentificationNum": "341915235",
+              "PartyInquiryLevel": "5",
+              "MaxReturn": "100"
+            },
+            "KeyPartyBObj": {
+              "ComponentID": "3006155",
+              "PartyType": "O",
+              "StartDate": "2000-02-23 00:00:00",
+              "ClientStatusType": "1000003",
+              "ClientStatusValue": "In-Active",
+              "MDMID": "cxbfh8888888909",
+              "KeyOrganizationNameBObj": {
+                "ComponentID": "3006133",
+                "NameUsageType": "1",
+                "NameUsageValue": "Legal",
+                "OrganizationName": "JPMORGAN BROOKLYN"
+              },
+              "KeyIdentifierBObj": [
+                {
+                  "ComponentID": "3006135",
+                  "IdentifierType": "2",
+                  "IdentifierValue": "TIN",
+                  "IdentifierNumber": "*********"
+                },
+                {
+                  "ComponentID": "3006135",
+                  "IdentifierType": "12",
+                  "IdentifierValue": "DUNS",
+                  "IdentifierNumber": "150660439",
+                  "IdentifierStatusType": "2",
+                  "IdentifierStatusValue": "Active"
+                }
+              ],
+              "KeyAddressBObj": {
+                "ComponentID": "3006138",
+                "AddressUsageType": "3",
+                "AddressUsageValue": "Business",
+                "AddressLineOne": "ATTN JOHN FORBES",
+                "AddressLineTwo": "2421 S NAPPANEE ST SUITE B",
+                "City": "HYDERBAD",
+                "StateType": "1000018",
+                "StateValue": "IN",
+                "CountryType": "185",
+                "CountryValue": "UNITED STATES",
+                "ZipPostalCode": "465171302",
+                "CountyCode": "039"
+              },
+              "KeyContactMethodBObj": [
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "2",
+                  "ContactMethodUsageValue": "Business Telephone",
+                  "ReferenceNumber": "5742955223",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "5223"
+                  }
+                },
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "1000003",
+                  "ContactMethodUsageValue": "Fax",
+                  "Fax": "5742959998",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "9998"
+                  }
+                },
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "1",
+                  "ContactMethodUsageValue": "Home Telephone",
+                  "ReferenceNumber": "5742950522",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "0522"
+                  }
+                }
+              ],
+              "KeyContactEquivalentBObj": [
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000009",
+                  "AdminSystemValue": "ENT",
+                  "AdminPartyId": "990011790",
+                  "StartDate": "2004-02-25 00:00:00",
+                  "EndDate": "2019-05-14 04:23:08.107403"
+                },
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000001",
+                  "AdminSystemValue": "ggg",
+                  "AdminPartyId": "0828R3C3169TJ",
+                  "StartDate": "2013-10-28 12:00:37.287"
+                },
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000003",
+                  "AdminSystemValue": "ggg",
+                  "AdminPartyId": "18167749",
+                  "StartDate": "2000-02-23 00:00:00"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}
+)
+[INFO ] 2019-05-21 11:39:35.546 [{}] Sender - Sending a message.
+[INFO ] 2019-05-21 11:39:37.577 [{}] Listener - Received message ActiveMQTextMessage {commandId = 5, responseRequired = true, messageId = ID:BLRLPTJAVA-37245-1558417443049-3:1:1:1:1, originalDestination = null, originalTransactionId = null, producerId = ID:BLRLPTJAVA-37245-1558417443049-3:1:1:1, destination = queue://OUT_2, transactionId = null, expiration = 0, timestamp = 1558418977141, arrival = 0, brokerInTime = 1558418977142, brokerOutTime = 1558418977143, correlationId = null, replyTo = null, persistent = true, type = null, priority = 4, groupID = null, groupSequence = 0, targetConsumerId = null, compressed = false, userID = null, content = org.apache.activemq.util.ByteSequence@1c14c022, marshalledProperties = org.apache.activemq.util.ByteSequence@56255b55, dataStructure = null, redeliveryCounter = 0, size = 0, properties = {breadcrumbId=ID:BLRLPTJAVA-42885-1558418850250-1:2:1:1:1, CamelJmsDeliveryMode=2}, readOnlyProperties = true, readOnlyBody = true, droppable = false, jmsXGroupFirstForConsumer = false, text = {"companyId":["0828R3C3169TJ","cxbfh888888890...8.107403"}]}}
+[INFO ] 2019-05-21 11:39:45.914 [{}] ProfileService - Listener response :: {"companyId":["0828R3C3169TJ","cxbfh8888888909"],"companyStatus":["Active","In-Active"],"companyName":["JPMORGAN NEYWORK","JPMORGAN BROOKLYN"],"companyCity":["ELKHART","HYDERBAD"],"companyState":["TX","IN"],"EquivalentBObj":[{"ComponentID":"3006145","AdminSystemType":"1000009","AdminSystemValue":"ENT","AdminPartyId":"990011790","StartDate":"2004-02-25 00:00:00","EndDate":"2019-05-14 04:23:08.107403"},{"ComponentID":"3006145","AdminSystemType":"1000009","AdminSystemValue":"ENT","AdminPartyId":"990011790","StartDate":"2004-02-25 00:00:00","EndDate":"2019-05-14 04:23:08.107403"}]}
+[INFO ] 2019-05-21 11:40:35.315 [{}] SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+[INFO ] 2019-05-21 11:40:35.315 [{}] AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2f16c6b3: startup date [Tue May 21 11:37:26 IST 2019]; root of context hierarchy
+[INFO ] 2019-05-21 11:40:35.318 [{}] DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+[INFO ] 2019-05-21 11:40:35.645 [{}] AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+[INFO ] 2019-05-21 11:41:31.392 [{}] CompanyProfileServiceApplication - Starting CompanyProfileServiceApplication on BLRLPTJAVA with PID 23092 (/home/sasikumarc/mk/KeyBankProfileService/target/classes started by sasikumarc in /home/sasikumarc/mk/KeyBankProfileService)
+[INFO ] 2019-05-21 11:41:31.404 [{}] CompanyProfileServiceApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-05-21 11:41:31.577 [{}] AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@299321e2: startup date [Tue May 21 11:41:31 IST 2019]; root of context hierarchy
+[INFO ] 2019-05-21 11:41:32.931 [{}] AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO ] 2019-05-21 11:41:33.251 [{}] TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+[INFO ] 2019-05-21 11:41:33.270 [{}] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+[INFO ] 2019-05-21 11:41:33.278 [{}] StandardService - Starting service [Tomcat]
+[INFO ] 2019-05-21 11:41:33.279 [{}] StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.29
+[INFO ] 2019-05-21 11:41:33.285 [{}] AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+[INFO ] 2019-05-21 11:41:33.362 [{}] [/keybank/api] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-05-21 11:41:33.362 [{}] ContextLoader - Root WebApplicationContext: initialization completed in 1785 ms
+[INFO ] 2019-05-21 11:41:33.528 [{}] ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+[INFO ] 2019-05-21 11:41:33.535 [{}] FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+[INFO ] 2019-05-21 11:41:33.535 [{}] FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[INFO ] 2019-05-21 11:41:33.535 [{}] FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[INFO ] 2019-05-21 11:41:33.536 [{}] FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+[INFO ] 2019-05-21 11:41:34.641 [{}] RequestMappingHandlerMapping - Mapped "{[/v1/profile-details],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.keybank.profile.io.ProfileResponse> com.keybank.profile.controller.ProfileController.processProfileDetails(com.keybank.profile.io.ProfileRequest) throws java.lang.Exception
+[INFO ] 2019-05-21 11:41:34.646 [{}] RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+[INFO ] 2019-05-21 11:41:34.661 [{}] RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+[INFO ] 2019-05-21 11:41:34.662 [{}] RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+[INFO ] 2019-05-21 11:41:34.664 [{}] RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+[INFO ] 2019-05-21 11:41:34.681 [{}] RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[INFO ] 2019-05-21 11:41:34.682 [{}] RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[INFO ] 2019-05-21 11:41:35.271 [{}] SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 2019-05-21 11:41:35.466 [{}] RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@299321e2: startup date [Tue May 21 11:41:31 IST 2019]; root of context hierarchy
+[INFO ] 2019-05-21 11:41:35.670 [{}] SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 2019-05-21 11:41:35.670 [{}] SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 2019-05-21 11:41:35.686 [{}] ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in globalExceptionHandler
+[INFO ] 2019-05-21 11:41:35.964 [{}] AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+[INFO ] 2019-05-21 11:41:35.972 [{}] DefaultLifecycleProcessor - Starting beans in phase 2147483647
+[INFO ] 2019-05-21 11:41:35.973 [{}] DocumentationPluginsBootstrapper - Context refreshed
+[INFO ] 2019-05-21 11:41:35.985 [{}] DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+[INFO ] 2019-05-21 11:41:35.996 [{}] ApiListingReferenceScanner - Scanning for api listing references
+[INFO ] 2019-05-21 11:41:36.344 [{}] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+[INFO ] 2019-05-21 11:41:36.350 [{}] NioSelectorPool - Using a shared selector for servlet write/read
+[INFO ] 2019-05-21 11:41:36.370 [{}] TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/keybank/api'
+[INFO ] 2019-05-21 11:41:36.378 [{}] CompanyProfileServiceApplication - Started CompanyProfileServiceApplication in 5.714 seconds (JVM running for 7.274)
+[INFO ] 2019-05-21 11:41:45.941 [{}] [/keybank/api] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+[INFO ] 2019-05-21 11:41:45.941 [{}] DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+[INFO ] 2019-05-21 11:41:45.966 [{}] DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 24 ms
+[INFO ] 2019-05-21 11:41:46.063 [{}] ProfileController - ProfileController :: processProfileDetails() :: Request ProfileRequest(orgName=JPMORGAN, orgId=null)
+[INFO ] 2019-05-21 11:41:46.064 [{}] ProfileService - ProfileService :: processProfileDetails() :: Init
+[INFO ] 2019-05-21 11:41:53.845 [{}] ProfileService - Before replace :: {
+  "TCRMService": {
+    "@schemaLocation": "http://www.ibm.com/mdm/schema MDMDomains.xsd",
+    "RequestControl": {
+      "requestID": "10015",
+      "DWLControl": {
+        "requesterName": "cusadmin",
+        "requesterLanguage": "100"
+      }
+    },
+    "TCRMTx": {
+      "TCRMTxType": "SearchCustomerByIdentifierDetails",
+      "TCRMTxObject": "KeyPartySearchBObj",
+      "TCRMObject": {
+        "KeyPartySearchBObj": {
+          "PartyInquiryLevel": "0",
+          "MaxReturn": "100",
+          "KeyOrganizationSearchBObj": 
+          { 
+          	"OrganizationName": "${orgName}$" ,
+          	"OrganizationId": "${orgId}$" 
+          }
+
+        }
+      }
+    }
+  }
+}
+
+
+[INFO ] 2019-05-21 11:41:53.852 [{}] ProfileService - After replace :: {
+  "TCRMService": {
+    "@schemaLocation": "http://www.ibm.com/mdm/schema MDMDomains.xsd",
+    "RequestControl": {
+      "requestID": "10015",
+      "DWLControl": {
+        "requesterName": "cusadmin",
+        "requesterLanguage": "100"
+      }
+    },
+    "TCRMTx": {
+      "TCRMTxType": "SearchCustomerByIdentifierDetails",
+      "TCRMTxObject": "KeyPartySearchBObj",
+      "TCRMObject": {
+        "KeyPartySearchBObj": {
+          "PartyInquiryLevel": "0",
+          "MaxReturn": "100",
+          "KeyOrganizationSearchBObj": 
+          { 
+          	"OrganizationName": "JPMORGAN" ,
+          	"OrganizationId": "${orgId}$" 
+          }
+
+        }
+      }
+    }
+  }
+}
+
+
+[INFO ] 2019-05-21 11:41:54.019 [{}] ProfileService - Response from MDM service :: ProfileResponse(status=200, statusMessage=StatusMessage(code=SUCCESS, description=Company profile details processed successfully.), response=null, data={
+  "TCRMService": [
+    {
+      "TxResponse": {
+        "RequestType": "SearchCustomerByIdentifierDetails",
+        "TxResult": {
+          "ResultCode": "SUCCESS"
+        },
+        "ResponseObject": {
+          "KeyPartySearchResultBObj": {
+            "ComponentID": "5100350",
+            "DWLStatus": {
+              "Status": "0"
+            },
+            "KeyPartySearchParamBObj": {
+              "ComponentID": "5100390",
+              "IdentificationType": "2",
+              "IdentificationNum": "341915235",
+              "PartyInquiryLevel": "5",
+              "MaxReturn": "100"
+            },
+            "KeyPartyBObj": {
+              "ComponentID": "3006155",
+              "PartyType": "O",
+              "StartDate": "2000-02-23 00:00:00",
+              "ClientStatusType": "1000003",
+              "ClientStatusValue": "Active",
+              "MDMID": "0828R3C3169TJ",
+              "KeyOrganizationNameBObj": {
+                "ComponentID": "3006133",
+                "NameUsageType": "1",
+                "NameUsageValue": "Legal",
+                "OrganizationName": "JPMORGAN NEYWORK"
+              },
+              "KeyIdentifierBObj": [
+                {
+                  "ComponentID": "3006135",
+                  "IdentifierType": "2",
+                  "IdentifierValue": "TIN",
+                  "IdentifierNumber": "*********"
+                },
+                {
+                  "ComponentID": "3006135",
+                  "IdentifierType": "12",
+                  "IdentifierValue": "DUNS",
+                  "IdentifierNumber": "150660439",
+                  "IdentifierStatusType": "2",
+                  "IdentifierStatusValue": "Active"
+                }
+              ],
+              "KeyAddressBObj": {
+                "ComponentID": "3006138",
+                "AddressUsageType": "3",
+                "AddressUsageValue": "Business",
+                "AddressLineOne": "ATTN JOHN FORBES",
+                "AddressLineTwo": "2421 S NAPPANEE ST SUITE B",
+                "City": "ELKHART",
+                "StateType": "1000018",
+                "StateValue": "TX",
+                "CountryType": "185",
+                "CountryValue": "UNITED STATES",
+                "ZipPostalCode": "465171302",
+                "CountyCode": "039"
+              },
+              "KeyContactMethodBObj": [
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "2",
+                  "ContactMethodUsageValue": "Business Telephone",
+                  "ReferenceNumber": "5742955223",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "5223"
+                  }
+                },
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "1000003",
+                  "ContactMethodUsageValue": "Fax",
+                  "Fax": "5742959998",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "9998"
+                  }
+                },
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "1",
+                  "ContactMethodUsageValue": "Home Telephone",
+                  "ReferenceNumber": "5742950522",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "0522"
+                  }
+                }
+              ],
+              "KeyContactEquivalentBObj": [
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000009",
+                  "AdminSystemValue": "ENT",
+                  "AdminPartyId": "990011790",
+                  "StartDate": "2004-02-25 00:00:00",
+                  "EndDate": "2019-05-14 04:23:08.107403"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "TxResponse": {
+        "RequestType": "SearchCustomerByIdentifierDetails",
+        "TxResult": {
+          "ResultCode": "SUCCESS"
+        },
+        "ResponseObject": {
+          "KeyPartySearchResultBObj": {
+            "ComponentID": "5100350",
+            "DWLStatus": {
+              "Status": "0"
+            },
+            "KeyPartySearchParamBObj": {
+              "ComponentID": "5100390",
+              "IdentificationType": "2",
+              "IdentificationNum": "341915235",
+              "PartyInquiryLevel": "5",
+              "MaxReturn": "100"
+            },
+            "KeyPartyBObj": {
+              "ComponentID": "3006155",
+              "PartyType": "O",
+              "StartDate": "2000-02-23 00:00:00",
+              "ClientStatusType": "1000003",
+              "ClientStatusValue": "In-Active",
+              "MDMID": "cxbfh8888888909",
+              "KeyOrganizationNameBObj": {
+                "ComponentID": "3006133",
+                "NameUsageType": "1",
+                "NameUsageValue": "Legal",
+                "OrganizationName": "JPMORGAN BROOKLYN"
+              },
+              "KeyIdentifierBObj": [
+                {
+                  "ComponentID": "3006135",
+                  "IdentifierType": "2",
+                  "IdentifierValue": "TIN",
+                  "IdentifierNumber": "*********"
+                },
+                {
+                  "ComponentID": "3006135",
+                  "IdentifierType": "12",
+                  "IdentifierValue": "DUNS",
+                  "IdentifierNumber": "150660439",
+                  "IdentifierStatusType": "2",
+                  "IdentifierStatusValue": "Active"
+                }
+              ],
+              "KeyAddressBObj": {
+                "ComponentID": "3006138",
+                "AddressUsageType": "3",
+                "AddressUsageValue": "Business",
+                "AddressLineOne": "ATTN JOHN FORBES",
+                "AddressLineTwo": "2421 S NAPPANEE ST SUITE B",
+                "City": "HYDERBAD",
+                "StateType": "1000018",
+                "StateValue": "IN",
+                "CountryType": "185",
+                "CountryValue": "UNITED STATES",
+                "ZipPostalCode": "465171302",
+                "CountyCode": "039"
+              },
+              "KeyContactMethodBObj": [
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "2",
+                  "ContactMethodUsageValue": "Business Telephone",
+                  "ReferenceNumber": "5742955223",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "5223"
+                  }
+                },
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "1000003",
+                  "ContactMethodUsageValue": "Fax",
+                  "Fax": "5742959998",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "9998"
+                  }
+                },
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "1",
+                  "ContactMethodUsageValue": "Home Telephone",
+                  "ReferenceNumber": "5742950522",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "0522"
+                  }
+                }
+              ],
+              "KeyContactEquivalentBObj": [
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000009",
+                  "AdminSystemValue": "ENT",
+                  "AdminPartyId": "990011790",
+                  "StartDate": "2004-02-25 00:00:00",
+                  "EndDate": "2019-05-14 04:23:08.107403"
+                },
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000001",
+                  "AdminSystemValue": "ggg",
+                  "AdminPartyId": "0828R3C3169TJ",
+                  "StartDate": "2013-10-28 12:00:37.287"
+                },
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000003",
+                  "AdminSystemValue": "ggg",
+                  "AdminPartyId": "18167749",
+                  "StartDate": "2000-02-23 00:00:00"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}
+)
+[INFO ] 2019-05-21 11:41:54.022 [{}] Sender - Sending a message.
+[INFO ] 2019-05-21 11:41:54.094 [{}] Listener - Received message ActiveMQTextMessage {commandId = 5, responseRequired = true, messageId = ID:BLRLPTJAVA-37245-1558417443049-3:2:1:1:1, originalDestination = null, originalTransactionId = null, producerId = ID:BLRLPTJAVA-37245-1558417443049-3:2:1:1, destination = queue://OUT_2, transactionId = null, expiration = 0, timestamp = 1558419114086, arrival = 0, brokerInTime = 1558419114086, brokerOutTime = 1558419114087, correlationId = null, replyTo = null, persistent = true, type = null, priority = 4, groupID = null, groupSequence = 0, targetConsumerId = null, compressed = false, userID = null, content = org.apache.activemq.util.ByteSequence@5d49459b, marshalledProperties = org.apache.activemq.util.ByteSequence@2d219258, dataStructure = null, redeliveryCounter = 0, size = 0, properties = {breadcrumbId=ID:BLRLPTJAVA-46725-1558419096151-1:2:1:1:1, CamelJmsDeliveryMode=2}, readOnlyProperties = true, readOnlyBody = true, droppable = false, jmsXGroupFirstForConsumer = false, text = {"companyId":["0828R3C3169TJ","cxbfh888888890...8.107403"}]}}
+[INFO ] 2019-05-21 11:41:59.277 [{}] ProfileService - Listener response :: {"companyId":["0828R3C3169TJ","cxbfh8888888909"],"companyStatus":["Active","In-Active"],"companyName":["JPMORGAN NEYWORK","JPMORGAN BROOKLYN"],"companyCity":["ELKHART","HYDERBAD"],"companyState":["TX","IN"],"EquivalentBObj":[{"ComponentID":"3006145","AdminSystemType":"1000009","AdminSystemValue":"ENT","AdminPartyId":"990011790","StartDate":"2004-02-25 00:00:00","EndDate":"2019-05-14 04:23:08.107403"},{"ComponentID":"3006145","AdminSystemType":"1000009","AdminSystemValue":"ENT","AdminPartyId":"990011790","StartDate":"2004-02-25 00:00:00","EndDate":"2019-05-14 04:23:08.107403"}]}
+[INFO ] 2019-05-21 11:44:02.761 [{}] ProfileService - ProfileService :: processProfileDetails() :: Init
+[INFO ] 2019-05-21 11:44:02.770 [{}] ProfileService - Before replace :: {
+  "TCRMService": {
+    "@schemaLocation": "http://www.ibm.com/mdm/schema MDMDomains.xsd",
+    "RequestControl": {
+      "requestID": "10015",
+      "DWLControl": {
+        "requesterName": "cusadmin",
+        "requesterLanguage": "100"
+      }
+    },
+    "TCRMTx": {
+      "TCRMTxType": "SearchCustomerByIdentifierDetails",
+      "TCRMTxObject": "KeyPartySearchBObj",
+      "TCRMObject": {
+        "KeyPartySearchBObj": {
+          "PartyInquiryLevel": "0",
+          "MaxReturn": "100",
+          "KeyOrganizationSearchBObj": 
+          { 
+          	"OrganizationName": "${orgName}$" ,
+          	"OrganizationId": "${orgId}$" 
+          }
+
+        }
+      }
+    }
+  }
+}
+
+
+[INFO ] 2019-05-21 11:44:02.775 [{}] ProfileService - After replace :: {
+  "TCRMService": {
+    "@schemaLocation": "http://www.ibm.com/mdm/schema MDMDomains.xsd",
+    "RequestControl": {
+      "requestID": "10015",
+      "DWLControl": {
+        "requesterName": "cusadmin",
+        "requesterLanguage": "100"
+      }
+    },
+    "TCRMTx": {
+      "TCRMTxType": "SearchCustomerByIdentifierDetails",
+      "TCRMTxObject": "KeyPartySearchBObj",
+      "TCRMObject": {
+        "KeyPartySearchBObj": {
+          "PartyInquiryLevel": "0",
+          "MaxReturn": "100",
+          "KeyOrganizationSearchBObj": 
+          { 
+          	"OrganizationName": "JPMORGAN" ,
+          	"OrganizationId": "${orgId}$" 
+          }
+
+        }
+      }
+    }
+  }
+}
+
+
+[INFO ] 2019-05-21 11:44:02.853 [{}] ProfileService - Response from MDM service :: ProfileResponse(status=200, statusMessage=StatusMessage(code=SUCCESS, description=Company profile details processed successfully.), response=null, data={
+  "TCRMService": [
+    {
+      "TxResponse": {
+        "RequestType": "SearchCustomerByIdentifierDetails",
+        "TxResult": {
+          "ResultCode": "SUCCESS"
+        },
+        "ResponseObject": {
+          "KeyPartySearchResultBObj": {
+            "ComponentID": "5100350",
+            "DWLStatus": {
+              "Status": "0"
+            },
+            "KeyPartySearchParamBObj": {
+              "ComponentID": "5100390",
+              "IdentificationType": "2",
+              "IdentificationNum": "341915235",
+              "PartyInquiryLevel": "5",
+              "MaxReturn": "100"
+            },
+            "KeyPartyBObj": {
+              "ComponentID": "3006155",
+              "PartyType": "O",
+              "StartDate": "2000-02-23 00:00:00",
+              "ClientStatusType": "1000003",
+              "ClientStatusValue": "Active",
+              "MDMID": "0828R3C3169TJ",
+              "KeyOrganizationNameBObj": {
+                "ComponentID": "3006133",
+                "NameUsageType": "1",
+                "NameUsageValue": "Legal",
+                "OrganizationName": "JPMORGAN NEYWORK"
+              },
+              "KeyIdentifierBObj": [
+                {
+                  "ComponentID": "3006135",
+                  "IdentifierType": "2",
+                  "IdentifierValue": "TIN",
+                  "IdentifierNumber": "*********"
+                },
+                {
+                  "ComponentID": "3006135",
+                  "IdentifierType": "12",
+                  "IdentifierValue": "DUNS",
+                  "IdentifierNumber": "150660439",
+                  "IdentifierStatusType": "2",
+                  "IdentifierStatusValue": "Active"
+                }
+              ],
+              "KeyAddressBObj": {
+                "ComponentID": "3006138",
+                "AddressUsageType": "3",
+                "AddressUsageValue": "Business",
+                "AddressLineOne": "ATTN JOHN FORBES",
+                "AddressLineTwo": "2421 S NAPPANEE ST SUITE B",
+                "City": "ELKHART",
+                "StateType": "1000018",
+                "StateValue": "TX",
+                "CountryType": "185",
+                "CountryValue": "UNITED STATES",
+                "ZipPostalCode": "465171302",
+                "CountyCode": "039"
+              },
+              "KeyContactMethodBObj": [
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "2",
+                  "ContactMethodUsageValue": "Business Telephone",
+                  "ReferenceNumber": "5742955223",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "5223"
+                  }
+                },
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "1000003",
+                  "ContactMethodUsageValue": "Fax",
+                  "Fax": "5742959998",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "9998"
+                  }
+                },
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "1",
+                  "ContactMethodUsageValue": "Home Telephone",
+                  "ReferenceNumber": "5742950522",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "0522"
+                  }
+                }
+              ],
+              "KeyContactEquivalentBObj": [
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000009",
+                  "AdminSystemValue": "ENT",
+                  "AdminPartyId": "990011790",
+                  "StartDate": "2004-02-25 00:00:00",
+                  "EndDate": "2019-05-14 04:23:08.107403"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "TxResponse": {
+        "RequestType": "SearchCustomerByIdentifierDetails",
+        "TxResult": {
+          "ResultCode": "SUCCESS"
+        },
+        "ResponseObject": {
+          "KeyPartySearchResultBObj": {
+            "ComponentID": "5100350",
+            "DWLStatus": {
+              "Status": "0"
+            },
+            "KeyPartySearchParamBObj": {
+              "ComponentID": "5100390",
+              "IdentificationType": "2",
+              "IdentificationNum": "341915235",
+              "PartyInquiryLevel": "5",
+              "MaxReturn": "100"
+            },
+            "KeyPartyBObj": {
+              "ComponentID": "3006155",
+              "PartyType": "O",
+              "StartDate": "2000-02-23 00:00:00",
+              "ClientStatusType": "1000003",
+              "ClientStatusValue": "In-Active",
+              "MDMID": "cxbfh8888888909",
+              "KeyOrganizationNameBObj": {
+                "ComponentID": "3006133",
+                "NameUsageType": "1",
+                "NameUsageValue": "Legal",
+                "OrganizationName": "JPMORGAN BROOKLYN"
+              },
+              "KeyIdentifierBObj": [
+                {
+                  "ComponentID": "3006135",
+                  "IdentifierType": "2",
+                  "IdentifierValue": "TIN",
+                  "IdentifierNumber": "*********"
+                },
+                {
+                  "ComponentID": "3006135",
+                  "IdentifierType": "12",
+                  "IdentifierValue": "DUNS",
+                  "IdentifierNumber": "150660439",
+                  "IdentifierStatusType": "2",
+                  "IdentifierStatusValue": "Active"
+                }
+              ],
+              "KeyAddressBObj": {
+                "ComponentID": "3006138",
+                "AddressUsageType": "3",
+                "AddressUsageValue": "Business",
+                "AddressLineOne": "ATTN JOHN FORBES",
+                "AddressLineTwo": "2421 S NAPPANEE ST SUITE B",
+                "City": "HYDERBAD",
+                "StateType": "1000018",
+                "StateValue": "IN",
+                "CountryType": "185",
+                "CountryValue": "UNITED STATES",
+                "ZipPostalCode": "465171302",
+                "CountyCode": "039"
+              },
+              "KeyContactMethodBObj": [
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "2",
+                  "ContactMethodUsageValue": "Business Telephone",
+                  "ReferenceNumber": "5742955223",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "5223"
+                  }
+                },
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "1000003",
+                  "ContactMethodUsageValue": "Fax",
+                  "Fax": "5742959998",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "9998"
+                  }
+                },
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "1",
+                  "ContactMethodUsageValue": "Home Telephone",
+                  "ReferenceNumber": "5742950522",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "0522"
+                  }
+                }
+              ],
+              "KeyContactEquivalentBObj": [
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000009",
+                  "AdminSystemValue": "ENT",
+                  "AdminPartyId": "990011790",
+                  "StartDate": "2004-02-25 00:00:00",
+                  "EndDate": "2019-05-14 04:23:08.107403"
+                },
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000001",
+                  "AdminSystemValue": "ggg",
+                  "AdminPartyId": "0828R3C3169TJ",
+                  "StartDate": "2013-10-28 12:00:37.287"
+                },
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000003",
+                  "AdminSystemValue": "ggg",
+                  "AdminPartyId": "18167749",
+                  "StartDate": "2000-02-23 00:00:00"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}
+)
+[INFO ] 2019-05-21 11:44:02.853 [{}] Sender - Sending a message.
+[INFO ] 2019-05-21 11:44:02.948 [{}] Listener - Received message ActiveMQTextMessage {commandId = 5, responseRequired = true, messageId = ID:BLRLPTJAVA-37245-1558417443049-3:3:1:1:1, originalDestination = null, originalTransactionId = null, producerId = ID:BLRLPTJAVA-37245-1558417443049-3:3:1:1, destination = queue://OUT_2, transactionId = null, expiration = 0, timestamp = 1558419242942, arrival = 0, brokerInTime = 1558419242942, brokerOutTime = 1558419242946, correlationId = null, replyTo = null, persistent = true, type = null, priority = 4, groupID = null, groupSequence = 0, targetConsumerId = null, compressed = false, userID = null, content = org.apache.activemq.util.ByteSequence@2b084078, marshalledProperties = org.apache.activemq.util.ByteSequence@4809ed45, dataStructure = null, redeliveryCounter = 0, size = 0, properties = {breadcrumbId=ID:BLRLPTJAVA-46725-1558419096151-1:3:1:1:1, CamelJmsDeliveryMode=2}, readOnlyProperties = true, readOnlyBody = true, droppable = false, jmsXGroupFirstForConsumer = false, text = {"companyId":["0828R3C3169TJ","cxbfh888888890...8.107403"}]}}
+[INFO ] 2019-05-21 11:44:07.981 [{}] ProfileService - Listener response :: {"companyId":["0828R3C3169TJ","cxbfh8888888909"],"companyStatus":["Active","In-Active"],"companyName":["JPMORGAN NEYWORK","JPMORGAN BROOKLYN"],"companyCity":["ELKHART","HYDERBAD"],"companyState":["TX","IN"],"EquivalentBObj":[{"ComponentID":"3006145","AdminSystemType":"1000009","AdminSystemValue":"ENT","AdminPartyId":"990011790","StartDate":"2004-02-25 00:00:00","EndDate":"2019-05-14 04:23:08.107403"},{"ComponentID":"3006145","AdminSystemType":"1000009","AdminSystemValue":"ENT","AdminPartyId":"990011790","StartDate":"2004-02-25 00:00:00","EndDate":"2019-05-14 04:23:08.107403"}]}
+[INFO ] 2019-05-21 11:44:33.063 [{}] ProfileService - Transferred bean follows :: QueueResponse(companyId=[0828R3C3169TJ, cxbfh8888888909], companyStatus=[Active, In-Active], companyName=[JPMORGAN NEYWORK, JPMORGAN BROOKLYN], companyCity=[ELKHART, HYDERBAD], companyState=[TX, IN], EquivalentBObj=[EquivalentBObj(ComponentID=3006145, AdminSystemType=1000009, AdminSystemValue=ENT, AdminPartyId=990011790, StartDate=2004-02-25 00:00:00, EndDate=2019-05-14 04:23:08.107403), EquivalentBObj(ComponentID=3006145, AdminSystemType=1000009, AdminSystemValue=ENT, AdminPartyId=990011790, StartDate=2004-02-25 00:00:00, EndDate=2019-05-14 04:23:08.107403)])
+[INFO ] 2019-05-21 11:45:03.367 [{}] ProfileService - ProfileService :: processProfileDetails() :: Ends
+[INFO ] 2019-05-21 11:45:05.049 [{}] ProfileController - ProfileController :: processProfileDetails() :: Response ProfileResponse(status=200, statusMessage=StatusMessage(code=SUCCESS, description=Company profile details processed successfully.), response=[ProfileDetails(companyId=0828R3C3169TJ, companyStatus=Active, companyName=JPMORGAN NEYWORK, companyCity=ELKHART, companyState=TX, equivalentBObj=EquivalentBObj(ComponentID=3006145, AdminSystemType=1000009, AdminSystemValue=ENT, AdminPartyId=990011790, StartDate=2004-02-25 00:00:00, EndDate=2019-05-14 04:23:08.107403)), ProfileDetails(companyId=cxbfh8888888909, companyStatus=In-Active, companyName=JPMORGAN BROOKLYN, companyCity=HYDERBAD, companyState=IN, equivalentBObj=EquivalentBObj(ComponentID=3006145, AdminSystemType=1000009, AdminSystemValue=ENT, AdminPartyId=990011790, StartDate=2004-02-25 00:00:00, EndDate=2019-05-14 04:23:08.107403))], data=null)
+[INFO ] 2019-05-21 11:47:48.065 [{}] CompanyProfileServiceApplication - Starting CompanyProfileServiceApplication on BLRLPTJAVA with PID 752 (/home/sasikumarc/mk/KeyBankProfileService/target/classes started by sasikumarc in /home/sasikumarc/mk/KeyBankProfileService)
+[INFO ] 2019-05-21 11:47:48.070 [{}] CompanyProfileServiceApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-05-21 11:47:48.114 [{}] AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@35a9782c: startup date [Tue May 21 11:47:48 IST 2019]; root of context hierarchy
+[INFO ] 2019-05-21 11:47:49.103 [{}] AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO ] 2019-05-21 11:47:49.563 [{}] TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+[INFO ] 2019-05-21 11:47:49.587 [{}] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+[INFO ] 2019-05-21 11:47:49.597 [{}] StandardService - Starting service [Tomcat]
+[INFO ] 2019-05-21 11:47:49.597 [{}] StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.29
+[INFO ] 2019-05-21 11:47:49.603 [{}] AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+[INFO ] 2019-05-21 11:47:49.698 [{}] [/keybank/api] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-05-21 11:47:49.698 [{}] ContextLoader - Root WebApplicationContext: initialization completed in 1586 ms
+[INFO ] 2019-05-21 11:47:49.839 [{}] ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+[INFO ] 2019-05-21 11:47:49.843 [{}] FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+[INFO ] 2019-05-21 11:47:49.844 [{}] FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[INFO ] 2019-05-21 11:47:49.844 [{}] FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[INFO ] 2019-05-21 11:47:49.844 [{}] FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+[INFO ] 2019-05-21 11:47:50.791 [{}] RequestMappingHandlerMapping - Mapped "{[/v1/profile-details],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.keybank.profile.io.ProfileResponse> com.keybank.profile.controller.ProfileController.processProfileDetails(com.keybank.profile.io.ProfileRequest) throws java.lang.Exception
+[INFO ] 2019-05-21 11:47:50.794 [{}] RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+[INFO ] 2019-05-21 11:47:50.799 [{}] RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+[INFO ] 2019-05-21 11:47:50.801 [{}] RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+[INFO ] 2019-05-21 11:47:50.802 [{}] RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+[INFO ] 2019-05-21 11:47:50.806 [{}] RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[INFO ] 2019-05-21 11:47:50.807 [{}] RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[INFO ] 2019-05-21 11:47:51.060 [{}] SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 2019-05-21 11:47:51.304 [{}] RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@35a9782c: startup date [Tue May 21 11:47:48 IST 2019]; root of context hierarchy
+[INFO ] 2019-05-21 11:47:51.629 [{}] SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 2019-05-21 11:47:51.629 [{}] SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 2019-05-21 11:47:51.654 [{}] ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in globalExceptionHandler
+[INFO ] 2019-05-21 11:47:52.140 [{}] AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+[INFO ] 2019-05-21 11:47:52.155 [{}] DefaultLifecycleProcessor - Starting beans in phase 2147483647
+[INFO ] 2019-05-21 11:47:52.156 [{}] DocumentationPluginsBootstrapper - Context refreshed
+[INFO ] 2019-05-21 11:47:52.175 [{}] DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+[INFO ] 2019-05-21 11:47:52.192 [{}] ApiListingReferenceScanner - Scanning for api listing references
+[INFO ] 2019-05-21 11:47:52.675 [{}] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+[INFO ] 2019-05-21 11:47:52.686 [{}] NioSelectorPool - Using a shared selector for servlet write/read
+[INFO ] 2019-05-21 11:47:52.704 [{}] TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/keybank/api'
+[INFO ] 2019-05-21 11:47:52.710 [{}] CompanyProfileServiceApplication - Started CompanyProfileServiceApplication in 4.937 seconds (JVM running for 5.95)
+[INFO ] 2019-05-21 11:48:06.241 [{}] [/keybank/api] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+[INFO ] 2019-05-21 11:48:06.242 [{}] DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+[INFO ] 2019-05-21 11:48:06.256 [{}] DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 14 ms
+[INFO ] 2019-05-21 11:48:06.320 [{}] ProfileController - ProfileController :: processProfileDetails() :: Request ProfileRequest(orgName=JPMORGAN, orgId=null)
+[INFO ] 2019-05-21 11:48:06.320 [{}] ProfileService - ProfileService :: processProfileDetails() :: Init
+[INFO ] 2019-05-21 11:48:06.321 [{}] ProfileService - Before replace :: {
+  "TCRMService": {
+    "@schemaLocation": "http://www.ibm.com/mdm/schema MDMDomains.xsd",
+    "RequestControl": {
+      "requestID": "10015",
+      "DWLControl": {
+        "requesterName": "cusadmin",
+        "requesterLanguage": "100"
+      }
+    },
+    "TCRMTx": {
+      "TCRMTxType": "SearchCustomerByIdentifierDetails",
+      "TCRMTxObject": "KeyPartySearchBObj",
+      "TCRMObject": {
+        "KeyPartySearchBObj": {
+          "PartyInquiryLevel": "0",
+          "MaxReturn": "100",
+          "KeyOrganizationSearchBObj": 
+          { 
+          	"OrganizationName": "${orgName}$" ,
+          	"OrganizationId": "${orgId}$" 
+          }
+
+        }
+      }
+    }
+  }
+}
+
+
+[INFO ] 2019-05-21 11:48:06.323 [{}] ProfileService - After replace :: {
+  "TCRMService": {
+    "@schemaLocation": "http://www.ibm.com/mdm/schema MDMDomains.xsd",
+    "RequestControl": {
+      "requestID": "10015",
+      "DWLControl": {
+        "requesterName": "cusadmin",
+        "requesterLanguage": "100"
+      }
+    },
+    "TCRMTx": {
+      "TCRMTxType": "SearchCustomerByIdentifierDetails",
+      "TCRMTxObject": "KeyPartySearchBObj",
+      "TCRMObject": {
+        "KeyPartySearchBObj": {
+          "PartyInquiryLevel": "0",
+          "MaxReturn": "100",
+          "KeyOrganizationSearchBObj": 
+          { 
+          	"OrganizationName": "JPMORGAN" ,
+          	"OrganizationId": "${orgId}$" 
+          }
+
+        }
+      }
+    }
+  }
+}
+
+
+[INFO ] 2019-05-21 11:48:06.441 [{}] ProfileService - Response from MDM service :: ProfileResponse(status=200, statusMessage=StatusMessage(code=SUCCESS, description=Company profile details processed successfully.), response=null, data={
+  "TCRMService": [
+    {
+      "TxResponse": {
+        "RequestType": "SearchCustomerByIdentifierDetails",
+        "TxResult": {
+          "ResultCode": "SUCCESS"
+        },
+        "ResponseObject": {
+          "KeyPartySearchResultBObj": {
+            "ComponentID": "5100350",
+            "DWLStatus": {
+              "Status": "0"
+            },
+            "KeyPartySearchParamBObj": {
+              "ComponentID": "5100390",
+              "IdentificationType": "2",
+              "IdentificationNum": "341915235",
+              "PartyInquiryLevel": "5",
+              "MaxReturn": "100"
+            },
+            "KeyPartyBObj": {
+              "ComponentID": "3006155",
+              "PartyType": "O",
+              "StartDate": "2000-02-23 00:00:00",
+              "ClientStatusType": "1000003",
+              "ClientStatusValue": "Active",
+              "MDMID": "0828R3C3169TJ",
+              "KeyOrganizationNameBObj": {
+                "ComponentID": "3006133",
+                "NameUsageType": "1",
+                "NameUsageValue": "Legal",
+                "OrganizationName": "JPMORGAN NEYWORK"
+              },
+              "KeyIdentifierBObj": [
+                {
+                  "ComponentID": "3006135",
+                  "IdentifierType": "2",
+                  "IdentifierValue": "TIN",
+                  "IdentifierNumber": "*********"
+                },
+                {
+                  "ComponentID": "3006135",
+                  "IdentifierType": "12",
+                  "IdentifierValue": "DUNS",
+                  "IdentifierNumber": "150660439",
+                  "IdentifierStatusType": "2",
+                  "IdentifierStatusValue": "Active"
+                }
+              ],
+              "KeyAddressBObj": {
+                "ComponentID": "3006138",
+                "AddressUsageType": "3",
+                "AddressUsageValue": "Business",
+                "AddressLineOne": "ATTN JOHN FORBES",
+                "AddressLineTwo": "2421 S NAPPANEE ST SUITE B",
+                "City": "ELKHART",
+                "StateType": "1000018",
+                "StateValue": "TX",
+                "CountryType": "185",
+                "CountryValue": "UNITED STATES",
+                "ZipPostalCode": "465171302",
+                "CountyCode": "039"
+              },
+              "KeyContactMethodBObj": [
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "2",
+                  "ContactMethodUsageValue": "Business Telephone",
+                  "ReferenceNumber": "5742955223",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "5223"
+                  }
+                },
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "1000003",
+                  "ContactMethodUsageValue": "Fax",
+                  "Fax": "5742959998",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "9998"
+                  }
+                },
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "1",
+                  "ContactMethodUsageValue": "Home Telephone",
+                  "ReferenceNumber": "5742950522",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "0522"
+                  }
+                }
+              ],
+              "KeyContactEquivalentBObj": [
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000009",
+                  "AdminSystemValue": "ENT",
+                  "AdminPartyId": "990011790",
+                  "StartDate": "2004-02-25 00:00:00",
+                  "EndDate": "2019-05-14 04:23:08.107403"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "TxResponse": {
+        "RequestType": "SearchCustomerByIdentifierDetails",
+        "TxResult": {
+          "ResultCode": "SUCCESS"
+        },
+        "ResponseObject": {
+          "KeyPartySearchResultBObj": {
+            "ComponentID": "5100350",
+            "DWLStatus": {
+              "Status": "0"
+            },
+            "KeyPartySearchParamBObj": {
+              "ComponentID": "5100390",
+              "IdentificationType": "2",
+              "IdentificationNum": "341915235",
+              "PartyInquiryLevel": "5",
+              "MaxReturn": "100"
+            },
+            "KeyPartyBObj": {
+              "ComponentID": "3006155",
+              "PartyType": "O",
+              "StartDate": "2000-02-23 00:00:00",
+              "ClientStatusType": "1000003",
+              "ClientStatusValue": "In-Active",
+              "MDMID": "cxbfh8888888909",
+              "KeyOrganizationNameBObj": {
+                "ComponentID": "3006133",
+                "NameUsageType": "1",
+                "NameUsageValue": "Legal",
+                "OrganizationName": "JPMORGAN BROOKLYN"
+              },
+              "KeyIdentifierBObj": [
+                {
+                  "ComponentID": "3006135",
+                  "IdentifierType": "2",
+                  "IdentifierValue": "TIN",
+                  "IdentifierNumber": "*********"
+                },
+                {
+                  "ComponentID": "3006135",
+                  "IdentifierType": "12",
+                  "IdentifierValue": "DUNS",
+                  "IdentifierNumber": "150660439",
+                  "IdentifierStatusType": "2",
+                  "IdentifierStatusValue": "Active"
+                }
+              ],
+              "KeyAddressBObj": {
+                "ComponentID": "3006138",
+                "AddressUsageType": "3",
+                "AddressUsageValue": "Business",
+                "AddressLineOne": "ATTN JOHN FORBES",
+                "AddressLineTwo": "2421 S NAPPANEE ST SUITE B",
+                "City": "HYDERBAD",
+                "StateType": "1000018",
+                "StateValue": "IN",
+                "CountryType": "185",
+                "CountryValue": "UNITED STATES",
+                "ZipPostalCode": "465171302",
+                "CountyCode": "039"
+              },
+              "KeyContactMethodBObj": [
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "2",
+                  "ContactMethodUsageValue": "Business Telephone",
+                  "ReferenceNumber": "5742955223",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "5223"
+                  }
+                },
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "1000003",
+                  "ContactMethodUsageValue": "Fax",
+                  "Fax": "5742959998",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "9998"
+                  }
+                },
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "1",
+                  "ContactMethodUsageValue": "Home Telephone",
+                  "ReferenceNumber": "5742950522",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "0522"
+                  }
+                }
+              ],
+              "KeyContactEquivalentBObj": [
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000009",
+                  "AdminSystemValue": "ENT",
+                  "AdminPartyId": "990011790",
+                  "StartDate": "2004-02-25 00:00:00",
+                  "EndDate": "2019-05-14 04:23:08.107403"
+                },
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000001",
+                  "AdminSystemValue": "ggg",
+                  "AdminPartyId": "0828R3C3169TJ",
+                  "StartDate": "2013-10-28 12:00:37.287"
+                },
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000003",
+                  "AdminSystemValue": "ggg",
+                  "AdminPartyId": "18167749",
+                  "StartDate": "2000-02-23 00:00:00"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}
+)
+[INFO ] 2019-05-21 11:48:06.443 [{}] Sender - Sending a message.
+[INFO ] 2019-05-21 11:48:06.520 [{}] Listener - Received message ActiveMQTextMessage {commandId = 5, responseRequired = true, messageId = ID:BLRLPTJAVA-37245-1558417443049-3:4:1:1:1, originalDestination = null, originalTransactionId = null, producerId = ID:BLRLPTJAVA-37245-1558417443049-3:4:1:1, destination = queue://OUT_2, transactionId = null, expiration = 0, timestamp = 1558419486511, arrival = 0, brokerInTime = 1558419486512, brokerOutTime = 1558419486512, correlationId = null, replyTo = null, persistent = true, type = null, priority = 4, groupID = null, groupSequence = 0, targetConsumerId = null, compressed = false, userID = null, content = org.apache.activemq.util.ByteSequence@5f650b0a, marshalledProperties = org.apache.activemq.util.ByteSequence@5d7c08a9, dataStructure = null, redeliveryCounter = 0, size = 0, properties = {breadcrumbId=ID:BLRLPTJAVA-37809-1558419472458-1:2:1:1:1, CamelJmsDeliveryMode=2}, readOnlyProperties = true, readOnlyBody = true, droppable = false, jmsXGroupFirstForConsumer = false, text = {"companyId":["0828R3C3169TJ","cxbfh888888890...8.107403"}]}}
+[INFO ] 2019-05-21 11:48:11.562 [{}] ProfileService - Listener response :: {"companyId":["0828R3C3169TJ","cxbfh8888888909"],"companyStatus":["Active","In-Active"],"companyName":["JPMORGAN NEYWORK","JPMORGAN BROOKLYN"],"companyCity":["ELKHART","HYDERBAD"],"companyState":["TX","IN"],"EquivalentBObj":[{"ComponentID":"3006145","AdminSystemType":"1000009","AdminSystemValue":"ENT","AdminPartyId":"990011790","StartDate":"2004-02-25 00:00:00","EndDate":"2019-05-14 04:23:08.107403"},{"ComponentID":"3006145","AdminSystemType":"1000009","AdminSystemValue":"ENT","AdminPartyId":"990011790","StartDate":"2004-02-25 00:00:00","EndDate":"2019-05-14 04:23:08.107403"}]}
+[INFO ] 2019-05-21 11:48:52.956 [{}] ProfileService - ProfileService :: processProfileDetails() :: Init
+[INFO ] 2019-05-21 11:48:52.961 [{}] ProfileService - Before replace :: {
+  "TCRMService": {
+    "@schemaLocation": "http://www.ibm.com/mdm/schema MDMDomains.xsd",
+    "RequestControl": {
+      "requestID": "10015",
+      "DWLControl": {
+        "requesterName": "cusadmin",
+        "requesterLanguage": "100"
+      }
+    },
+    "TCRMTx": {
+      "TCRMTxType": "SearchCustomerByIdentifierDetails",
+      "TCRMTxObject": "KeyPartySearchBObj",
+      "TCRMObject": {
+        "KeyPartySearchBObj": {
+          "PartyInquiryLevel": "0",
+          "MaxReturn": "100",
+          "KeyOrganizationSearchBObj": 
+          { 
+          	"OrganizationName": "${orgName}$" ,
+          	"OrganizationId": "${orgId}$" 
+          }
+
+        }
+      }
+    }
+  }
+}
+
+
+[INFO ] 2019-05-21 11:48:52.963 [{}] ProfileService - After replace :: {
+  "TCRMService": {
+    "@schemaLocation": "http://www.ibm.com/mdm/schema MDMDomains.xsd",
+    "RequestControl": {
+      "requestID": "10015",
+      "DWLControl": {
+        "requesterName": "cusadmin",
+        "requesterLanguage": "100"
+      }
+    },
+    "TCRMTx": {
+      "TCRMTxType": "SearchCustomerByIdentifierDetails",
+      "TCRMTxObject": "KeyPartySearchBObj",
+      "TCRMObject": {
+        "KeyPartySearchBObj": {
+          "PartyInquiryLevel": "0",
+          "MaxReturn": "100",
+          "KeyOrganizationSearchBObj": 
+          { 
+          	"OrganizationName": "JPMORGAN" ,
+          	"OrganizationId": "${orgId}$" 
+          }
+
+        }
+      }
+    }
+  }
+}
+
+
+[INFO ] 2019-05-21 11:48:53.249 [{}] ProfileService - Response from MDM service :: ProfileResponse(status=200, statusMessage=StatusMessage(code=SUCCESS, description=Company profile details processed successfully.), response=null, data={
+  "TCRMService": [
+    {
+      "TxResponse": {
+        "RequestType": "SearchCustomerByIdentifierDetails",
+        "TxResult": {
+          "ResultCode": "SUCCESS"
+        },
+        "ResponseObject": {
+          "KeyPartySearchResultBObj": {
+            "ComponentID": "5100350",
+            "DWLStatus": {
+              "Status": "0"
+            },
+            "KeyPartySearchParamBObj": {
+              "ComponentID": "5100390",
+              "IdentificationType": "2",
+              "IdentificationNum": "341915235",
+              "PartyInquiryLevel": "5",
+              "MaxReturn": "100"
+            },
+            "KeyPartyBObj": {
+              "ComponentID": "3006155",
+              "PartyType": "O",
+              "StartDate": "2000-02-23 00:00:00",
+              "ClientStatusType": "1000003",
+              "ClientStatusValue": "Active",
+              "MDMID": "0828R3C3169TJ",
+              "KeyOrganizationNameBObj": {
+                "ComponentID": "3006133",
+                "NameUsageType": "1",
+                "NameUsageValue": "Legal",
+                "OrganizationName": "JPMORGAN NEYWORK"
+              },
+              "KeyIdentifierBObj": [
+                {
+                  "ComponentID": "3006135",
+                  "IdentifierType": "2",
+                  "IdentifierValue": "TIN",
+                  "IdentifierNumber": "*********"
+                },
+                {
+                  "ComponentID": "3006135",
+                  "IdentifierType": "12",
+                  "IdentifierValue": "DUNS",
+                  "IdentifierNumber": "150660439",
+                  "IdentifierStatusType": "2",
+                  "IdentifierStatusValue": "Active"
+                }
+              ],
+              "KeyAddressBObj": {
+                "ComponentID": "3006138",
+                "AddressUsageType": "3",
+                "AddressUsageValue": "Business",
+                "AddressLineOne": "ATTN JOHN FORBES",
+                "AddressLineTwo": "2421 S NAPPANEE ST SUITE B",
+                "City": "ELKHART",
+                "StateType": "1000018",
+                "StateValue": "TX",
+                "CountryType": "185",
+                "CountryValue": "UNITED STATES",
+                "ZipPostalCode": "465171302",
+                "CountyCode": "039"
+              },
+              "KeyContactMethodBObj": [
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "2",
+                  "ContactMethodUsageValue": "Business Telephone",
+                  "ReferenceNumber": "5742955223",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "5223"
+                  }
+                },
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "1000003",
+                  "ContactMethodUsageValue": "Fax",
+                  "Fax": "5742959998",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "9998"
+                  }
+                },
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "1",
+                  "ContactMethodUsageValue": "Home Telephone",
+                  "ReferenceNumber": "5742950522",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "0522"
+                  }
+                }
+              ],
+              "KeyContactEquivalentBObj": [
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000009",
+                  "AdminSystemValue": "ENT",
+                  "AdminPartyId": "990011790",
+                  "StartDate": "2004-02-25 00:00:00",
+                  "EndDate": "2019-05-14 04:23:08.107403"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "TxResponse": {
+        "RequestType": "SearchCustomerByIdentifierDetails",
+        "TxResult": {
+          "ResultCode": "SUCCESS"
+        },
+        "ResponseObject": {
+          "KeyPartySearchResultBObj": {
+            "ComponentID": "5100350",
+            "DWLStatus": {
+              "Status": "0"
+            },
+            "KeyPartySearchParamBObj": {
+              "ComponentID": "5100390",
+              "IdentificationType": "2",
+              "IdentificationNum": "341915235",
+              "PartyInquiryLevel": "5",
+              "MaxReturn": "100"
+            },
+            "KeyPartyBObj": {
+              "ComponentID": "3006155",
+              "PartyType": "O",
+              "StartDate": "2000-02-23 00:00:00",
+              "ClientStatusType": "1000003",
+              "ClientStatusValue": "In-Active",
+              "MDMID": "cxbfh8888888909",
+              "KeyOrganizationNameBObj": {
+                "ComponentID": "3006133",
+                "NameUsageType": "1",
+                "NameUsageValue": "Legal",
+                "OrganizationName": "JPMORGAN BROOKLYN"
+              },
+              "KeyIdentifierBObj": [
+                {
+                  "ComponentID": "3006135",
+                  "IdentifierType": "2",
+                  "IdentifierValue": "TIN",
+                  "IdentifierNumber": "*********"
+                },
+                {
+                  "ComponentID": "3006135",
+                  "IdentifierType": "12",
+                  "IdentifierValue": "DUNS",
+                  "IdentifierNumber": "150660439",
+                  "IdentifierStatusType": "2",
+                  "IdentifierStatusValue": "Active"
+                }
+              ],
+              "KeyAddressBObj": {
+                "ComponentID": "3006138",
+                "AddressUsageType": "3",
+                "AddressUsageValue": "Business",
+                "AddressLineOne": "ATTN JOHN FORBES",
+                "AddressLineTwo": "2421 S NAPPANEE ST SUITE B",
+                "City": "HYDERBAD",
+                "StateType": "1000018",
+                "StateValue": "IN",
+                "CountryType": "185",
+                "CountryValue": "UNITED STATES",
+                "ZipPostalCode": "465171302",
+                "CountyCode": "039"
+              },
+              "KeyContactMethodBObj": [
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "2",
+                  "ContactMethodUsageValue": "Business Telephone",
+                  "ReferenceNumber": "5742955223",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "5223"
+                  }
+                },
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "1000003",
+                  "ContactMethodUsageValue": "Fax",
+                  "Fax": "5742959998",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "9998"
+                  }
+                },
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "1",
+                  "ContactMethodUsageValue": "Home Telephone",
+                  "ReferenceNumber": "5742950522",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "0522"
+                  }
+                }
+              ],
+              "KeyContactEquivalentBObj": [
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000009",
+                  "AdminSystemValue": "ENT",
+                  "AdminPartyId": "990011790",
+                  "StartDate": "2004-02-25 00:00:00",
+                  "EndDate": "2019-05-14 04:23:08.107403"
+                },
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000001",
+                  "AdminSystemValue": "ggg",
+                  "AdminPartyId": "0828R3C3169TJ",
+                  "StartDate": "2013-10-28 12:00:37.287"
+                },
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000003",
+                  "AdminSystemValue": "ggg",
+                  "AdminPartyId": "18167749",
+                  "StartDate": "2000-02-23 00:00:00"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}
+)
+[INFO ] 2019-05-21 11:48:53.249 [{}] Sender - Sending a message.
+[INFO ] 2019-05-21 11:48:53.375 [{}] Listener - Received message ActiveMQTextMessage {commandId = 5, responseRequired = true, messageId = ID:BLRLPTJAVA-37245-1558417443049-3:5:1:1:1, originalDestination = null, originalTransactionId = null, producerId = ID:BLRLPTJAVA-37245-1558417443049-3:5:1:1, destination = queue://OUT_2, transactionId = null, expiration = 0, timestamp = 1558419533347, arrival = 0, brokerInTime = 1558419533349, brokerOutTime = 1558419533364, correlationId = null, replyTo = null, persistent = true, type = null, priority = 4, groupID = null, groupSequence = 0, targetConsumerId = null, compressed = false, userID = null, content = org.apache.activemq.util.ByteSequence@193038d2, marshalledProperties = org.apache.activemq.util.ByteSequence@2d79e93b, dataStructure = null, redeliveryCounter = 0, size = 0, properties = {breadcrumbId=ID:BLRLPTJAVA-37809-1558419472458-1:3:1:1:1, CamelJmsDeliveryMode=2}, readOnlyProperties = true, readOnlyBody = true, droppable = false, jmsXGroupFirstForConsumer = false, text = {"companyId":["0828R3C3169TJ","cxbfh888888890...8.107403"}]}}
+[INFO ] 2019-05-21 11:48:58.360 [{}] ProfileService - Listener response :: {"companyId":["0828R3C3169TJ","cxbfh8888888909"],"companyStatus":["Active","In-Active"],"companyName":["JPMORGAN NEYWORK","JPMORGAN BROOKLYN"],"companyCity":["ELKHART","HYDERBAD"],"companyState":["TX","IN"],"EquivalentBObj":[{"ComponentID":"3006145","AdminSystemType":"1000009","AdminSystemValue":"ENT","AdminPartyId":"990011790","StartDate":"2004-02-25 00:00:00","EndDate":"2019-05-14 04:23:08.107403"},{"ComponentID":"3006145","AdminSystemType":"1000009","AdminSystemValue":"ENT","AdminPartyId":"990011790","StartDate":"2004-02-25 00:00:00","EndDate":"2019-05-14 04:23:08.107403"}]}
+[INFO ] 2019-05-21 11:49:06.436 [{}] ProfileService - Transferred bean follows :: QueueResponse(companyId=[0828R3C3169TJ, cxbfh8888888909], companyStatus=[Active, In-Active], companyName=[JPMORGAN NEYWORK, JPMORGAN BROOKLYN], companyCity=[ELKHART, HYDERBAD], companyState=[TX, IN], EquivalentBObj=[EquivalentBObj(ComponentID=3006145, AdminSystemType=1000009, AdminSystemValue=ENT, AdminPartyId=990011790, StartDate=2004-02-25 00:00:00, EndDate=2019-05-14 04:23:08.107403), EquivalentBObj(ComponentID=3006145, AdminSystemType=1000009, AdminSystemValue=ENT, AdminPartyId=990011790, StartDate=2004-02-25 00:00:00, EndDate=2019-05-14 04:23:08.107403)])
+[INFO ] 2019-05-21 11:49:06.436 [{}] ProfileService - ProfileService :: processProfileDetails() :: Ends
+[INFO ] 2019-05-21 11:49:06.437 [{}] ProfileController - ProfileController :: processProfileDetails() :: Response ProfileResponse(status=200, statusMessage=StatusMessage(code=SUCCESS, description=Company profile details processed successfully.), response=[ProfileDetails(companyId=0828R3C3169TJ, companyStatus=Active, companyName=JPMORGAN NEYWORK, companyCity=ELKHART, companyState=TX, equivalentBObj=EquivalentBObj(ComponentID=3006145, AdminSystemType=1000009, AdminSystemValue=ENT, AdminPartyId=990011790, StartDate=2004-02-25 00:00:00, EndDate=2019-05-14 04:23:08.107403)), ProfileDetails(companyId=cxbfh8888888909, companyStatus=In-Active, companyName=JPMORGAN BROOKLYN, companyCity=HYDERBAD, companyState=IN, equivalentBObj=EquivalentBObj(ComponentID=3006145, AdminSystemType=1000009, AdminSystemValue=ENT, AdminPartyId=990011790, StartDate=2004-02-25 00:00:00, EndDate=2019-05-14 04:23:08.107403))], data=null)
+[INFO ] 2019-05-21 11:50:45.516 [{}] ProfileController - ProfileController :: processProfileDetails() :: Request ProfileRequest(orgName=JPMORGAN, orgId=null)
+[INFO ] 2019-05-21 11:50:45.517 [{}] ProfileService - ProfileService :: processProfileDetails() :: Init
+[INFO ] 2019-05-21 11:50:45.518 [{}] ProfileService - Before replace :: {
+  "TCRMService": {
+    "@schemaLocation": "http://www.ibm.com/mdm/schema MDMDomains.xsd",
+    "RequestControl": {
+      "requestID": "10015",
+      "DWLControl": {
+        "requesterName": "cusadmin",
+        "requesterLanguage": "100"
+      }
+    },
+    "TCRMTx": {
+      "TCRMTxType": "SearchCustomerByIdentifierDetails",
+      "TCRMTxObject": "KeyPartySearchBObj",
+      "TCRMObject": {
+        "KeyPartySearchBObj": {
+          "PartyInquiryLevel": "0",
+          "MaxReturn": "100",
+          "KeyOrganizationSearchBObj": 
+          { 
+          	"OrganizationName": "${orgName}$" ,
+          	"OrganizationId": "${orgId}$" 
+          }
+
+        }
+      }
+    }
+  }
+}
+
+
+[INFO ] 2019-05-21 11:50:45.519 [{}] ProfileService - After replace :: {
+  "TCRMService": {
+    "@schemaLocation": "http://www.ibm.com/mdm/schema MDMDomains.xsd",
+    "RequestControl": {
+      "requestID": "10015",
+      "DWLControl": {
+        "requesterName": "cusadmin",
+        "requesterLanguage": "100"
+      }
+    },
+    "TCRMTx": {
+      "TCRMTxType": "SearchCustomerByIdentifierDetails",
+      "TCRMTxObject": "KeyPartySearchBObj",
+      "TCRMObject": {
+        "KeyPartySearchBObj": {
+          "PartyInquiryLevel": "0",
+          "MaxReturn": "100",
+          "KeyOrganizationSearchBObj": 
+          { 
+          	"OrganizationName": "JPMORGAN" ,
+          	"OrganizationId": "${orgId}$" 
+          }
+
+        }
+      }
+    }
+  }
+}
+
+
+[INFO ] 2019-05-21 11:50:46.127 [{}] ProfileService - Response from MDM service :: ProfileResponse(status=200, statusMessage=StatusMessage(code=SUCCESS, description=Company profile details processed successfully.), response=null, data={
+  "TCRMService": [
+    {
+      "TxResponse": {
+        "RequestType": "SearchCustomerByIdentifierDetails",
+        "TxResult": {
+          "ResultCode": "SUCCESS"
+        },
+        "ResponseObject": {
+          "KeyPartySearchResultBObj": {
+            "ComponentID": "5100350",
+            "DWLStatus": {
+              "Status": "0"
+            },
+            "KeyPartySearchParamBObj": {
+              "ComponentID": "5100390",
+              "IdentificationType": "2",
+              "IdentificationNum": "341915235",
+              "PartyInquiryLevel": "5",
+              "MaxReturn": "100"
+            },
+            "KeyPartyBObj": {
+              "ComponentID": "3006155",
+              "PartyType": "O",
+              "StartDate": "2000-02-23 00:00:00",
+              "ClientStatusType": "1000003",
+              "ClientStatusValue": "Active",
+              "MDMID": "0828R3C3169TJ",
+              "KeyOrganizationNameBObj": {
+                "ComponentID": "3006133",
+                "NameUsageType": "1",
+                "NameUsageValue": "Legal",
+                "OrganizationName": "JPMORGAN NEYWORK"
+              },
+              "KeyIdentifierBObj": [
+                {
+                  "ComponentID": "3006135",
+                  "IdentifierType": "2",
+                  "IdentifierValue": "TIN",
+                  "IdentifierNumber": "*********"
+                },
+                {
+                  "ComponentID": "3006135",
+                  "IdentifierType": "12",
+                  "IdentifierValue": "DUNS",
+                  "IdentifierNumber": "150660439",
+                  "IdentifierStatusType": "2",
+                  "IdentifierStatusValue": "Active"
+                }
+              ],
+              "KeyAddressBObj": {
+                "ComponentID": "3006138",
+                "AddressUsageType": "3",
+                "AddressUsageValue": "Business",
+                "AddressLineOne": "ATTN JOHN FORBES",
+                "AddressLineTwo": "2421 S NAPPANEE ST SUITE B",
+                "City": "ELKHART",
+                "StateType": "1000018",
+                "StateValue": "TX",
+                "CountryType": "185",
+                "CountryValue": "UNITED STATES",
+                "ZipPostalCode": "465171302",
+                "CountyCode": "039"
+              },
+              "KeyContactMethodBObj": [
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "2",
+                  "ContactMethodUsageValue": "Business Telephone",
+                  "ReferenceNumber": "5742955223",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "5223"
+                  }
+                },
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "1000003",
+                  "ContactMethodUsageValue": "Fax",
+                  "Fax": "5742959998",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "9998"
+                  }
+                },
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "1",
+                  "ContactMethodUsageValue": "Home Telephone",
+                  "ReferenceNumber": "5742950522",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "0522"
+                  }
+                }
+              ],
+              "KeyContactEquivalentBObj": [
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000009",
+                  "AdminSystemValue": "sss",
+                  "AdminPartyId": "990011790",
+                  "StartDate": "2004-02-25 00:00:00",
+                  "EndDate": "2019-05-14 04:23:08.107403"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "TxResponse": {
+        "RequestType": "SearchCustomerByIdentifierDetails",
+        "TxResult": {
+          "ResultCode": "SUCCESS"
+        },
+        "ResponseObject": {
+          "KeyPartySearchResultBObj": {
+            "ComponentID": "5100350",
+            "DWLStatus": {
+              "Status": "0"
+            },
+            "KeyPartySearchParamBObj": {
+              "ComponentID": "5100390",
+              "IdentificationType": "2",
+              "IdentificationNum": "341915235",
+              "PartyInquiryLevel": "5",
+              "MaxReturn": "100"
+            },
+            "KeyPartyBObj": {
+              "ComponentID": "3006155",
+              "PartyType": "O",
+              "StartDate": "2000-02-23 00:00:00",
+              "ClientStatusType": "1000003",
+              "ClientStatusValue": "In-Active",
+              "MDMID": "cxbfh8888888909",
+              "KeyOrganizationNameBObj": {
+                "ComponentID": "3006133",
+                "NameUsageType": "1",
+                "NameUsageValue": "Legal",
+                "OrganizationName": "JPMORGAN BROOKLYN"
+              },
+              "KeyIdentifierBObj": [
+                {
+                  "ComponentID": "3006135",
+                  "IdentifierType": "2",
+                  "IdentifierValue": "TIN",
+                  "IdentifierNumber": "*********"
+                },
+                {
+                  "ComponentID": "3006135",
+                  "IdentifierType": "12",
+                  "IdentifierValue": "DUNS",
+                  "IdentifierNumber": "150660439",
+                  "IdentifierStatusType": "2",
+                  "IdentifierStatusValue": "Active"
+                }
+              ],
+              "KeyAddressBObj": {
+                "ComponentID": "3006138",
+                "AddressUsageType": "3",
+                "AddressUsageValue": "Business",
+                "AddressLineOne": "ATTN JOHN FORBES",
+                "AddressLineTwo": "2421 S NAPPANEE ST SUITE B",
+                "City": "HYDERBAD",
+                "StateType": "1000018",
+                "StateValue": "IN",
+                "CountryType": "185",
+                "CountryValue": "UNITED STATES",
+                "ZipPostalCode": "465171302",
+                "CountyCode": "039"
+              },
+              "KeyContactMethodBObj": [
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "2",
+                  "ContactMethodUsageValue": "Business Telephone",
+                  "ReferenceNumber": "5742955223",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "5223"
+                  }
+                },
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "1000003",
+                  "ContactMethodUsageValue": "Fax",
+                  "Fax": "5742959998",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "9998"
+                  }
+                },
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "1",
+                  "ContactMethodUsageValue": "Home Telephone",
+                  "ReferenceNumber": "5742950522",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "0522"
+                  }
+                }
+              ],
+              "KeyContactEquivalentBObj": [
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000009",
+                  "AdminSystemValue": "ENT",
+                  "AdminPartyId": "990011790",
+                  "StartDate": "2004-02-25 00:00:00",
+                  "EndDate": "2019-05-14 04:23:08.107403"
+                },
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000001",
+                  "AdminSystemValue": "ggg",
+                  "AdminPartyId": "0828R3C3169TJ",
+                  "StartDate": "2013-10-28 12:00:37.287"
+                },
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000003",
+                  "AdminSystemValue": "ggg",
+                  "AdminPartyId": "18167749",
+                  "StartDate": "2000-02-23 00:00:00"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}
+)
+[INFO ] 2019-05-21 11:50:46.127 [{}] Sender - Sending a message.
+[INFO ] 2019-05-21 11:50:46.294 [{}] Listener - Received message ActiveMQTextMessage {commandId = 5, responseRequired = true, messageId = ID:BLRLPTJAVA-37245-1558417443049-3:6:1:1:1, originalDestination = null, originalTransactionId = null, producerId = ID:BLRLPTJAVA-37245-1558417443049-3:6:1:1, destination = queue://OUT_2, transactionId = null, expiration = 0, timestamp = 1558419646253, arrival = 0, brokerInTime = 1558419646253, brokerOutTime = 1558419646281, correlationId = null, replyTo = null, persistent = true, type = null, priority = 4, groupID = null, groupSequence = 0, targetConsumerId = null, compressed = false, userID = null, content = org.apache.activemq.util.ByteSequence@5ab38ac5, marshalledProperties = org.apache.activemq.util.ByteSequence@67b7e87a, dataStructure = null, redeliveryCounter = 0, size = 0, properties = {breadcrumbId=ID:BLRLPTJAVA-37809-1558419472458-1:4:1:1:1, CamelJmsDeliveryMode=2}, readOnlyProperties = true, readOnlyBody = true, droppable = false, jmsXGroupFirstForConsumer = false, text = {"companyId":["0828R3C3169TJ","cxbfh888888890...08.107403"}}}
+[INFO ] 2019-05-21 11:50:51.272 [{}] ProfileService - Listener response :: {"companyId":["0828R3C3169TJ","cxbfh8888888909"],"companyStatus":["Active","In-Active"],"companyName":["JPMORGAN NEYWORK","JPMORGAN BROOKLYN"],"companyCity":["ELKHART","HYDERBAD"],"companyState":["TX","IN"],"EquivalentBObj":{"ComponentID":"3006145","AdminSystemType":"1000009","AdminSystemValue":"ENT","AdminPartyId":"990011790","StartDate":"2004-02-25 00:00:00","EndDate":"2019-05-14 04:23:08.107403"}}
+[ERROR] 2019-05-21 11:50:51.294 [{}] GlobalExceptionHandler - java.lang.IllegalStateException: Expected BEGIN_ARRAY but was BEGIN_OBJECT at line 1 column 226 path $.EquivalentBObj
+[INFO ] 2019-05-21 11:51:42.195 [{}] ProfileController - ProfileController :: processProfileDetails() :: Request ProfileRequest(orgName=JPMORGAN, orgId=null)
+[INFO ] 2019-05-21 11:51:42.196 [{}] ProfileService - ProfileService :: processProfileDetails() :: Init
+[INFO ] 2019-05-21 11:51:42.196 [{}] ProfileService - Before replace :: {
+  "TCRMService": {
+    "@schemaLocation": "http://www.ibm.com/mdm/schema MDMDomains.xsd",
+    "RequestControl": {
+      "requestID": "10015",
+      "DWLControl": {
+        "requesterName": "cusadmin",
+        "requesterLanguage": "100"
+      }
+    },
+    "TCRMTx": {
+      "TCRMTxType": "SearchCustomerByIdentifierDetails",
+      "TCRMTxObject": "KeyPartySearchBObj",
+      "TCRMObject": {
+        "KeyPartySearchBObj": {
+          "PartyInquiryLevel": "0",
+          "MaxReturn": "100",
+          "KeyOrganizationSearchBObj": 
+          { 
+          	"OrganizationName": "${orgName}$" ,
+          	"OrganizationId": "${orgId}$" 
+          }
+
+        }
+      }
+    }
+  }
+}
+
+
+[INFO ] 2019-05-21 11:51:42.196 [{}] ProfileService - After replace :: {
+  "TCRMService": {
+    "@schemaLocation": "http://www.ibm.com/mdm/schema MDMDomains.xsd",
+    "RequestControl": {
+      "requestID": "10015",
+      "DWLControl": {
+        "requesterName": "cusadmin",
+        "requesterLanguage": "100"
+      }
+    },
+    "TCRMTx": {
+      "TCRMTxType": "SearchCustomerByIdentifierDetails",
+      "TCRMTxObject": "KeyPartySearchBObj",
+      "TCRMObject": {
+        "KeyPartySearchBObj": {
+          "PartyInquiryLevel": "0",
+          "MaxReturn": "100",
+          "KeyOrganizationSearchBObj": 
+          { 
+          	"OrganizationName": "JPMORGAN" ,
+          	"OrganizationId": "${orgId}$" 
+          }
+
+        }
+      }
+    }
+  }
+}
+
+
+[INFO ] 2019-05-21 11:51:42.369 [{}] ProfileService - Response from MDM service :: ProfileResponse(status=200, statusMessage=StatusMessage(code=SUCCESS, description=Company profile details processed successfully.), response=null, data={
+  "TCRMService": [
+    {
+      "TxResponse": {
+        "RequestType": "SearchCustomerByIdentifierDetails",
+        "TxResult": {
+          "ResultCode": "SUCCESS"
+        },
+        "ResponseObject": {
+          "KeyPartySearchResultBObj": {
+            "ComponentID": "5100350",
+            "DWLStatus": {
+              "Status": "0"
+            },
+            "KeyPartySearchParamBObj": {
+              "ComponentID": "5100390",
+              "IdentificationType": "2",
+              "IdentificationNum": "341915235",
+              "PartyInquiryLevel": "5",
+              "MaxReturn": "100"
+            },
+            "KeyPartyBObj": {
+              "ComponentID": "3006155",
+              "PartyType": "O",
+              "StartDate": "2000-02-23 00:00:00",
+              "ClientStatusType": "1000003",
+              "ClientStatusValue": "Active",
+              "MDMID": "0828R3C3169TJ",
+              "KeyOrganizationNameBObj": {
+                "ComponentID": "3006133",
+                "NameUsageType": "1",
+                "NameUsageValue": "Legal",
+                "OrganizationName": "JPMORGAN NEYWORK"
+              },
+              "KeyIdentifierBObj": [
+                {
+                  "ComponentID": "3006135",
+                  "IdentifierType": "2",
+                  "IdentifierValue": "TIN",
+                  "IdentifierNumber": "*********"
+                },
+                {
+                  "ComponentID": "3006135",
+                  "IdentifierType": "12",
+                  "IdentifierValue": "DUNS",
+                  "IdentifierNumber": "150660439",
+                  "IdentifierStatusType": "2",
+                  "IdentifierStatusValue": "Active"
+                }
+              ],
+              "KeyAddressBObj": {
+                "ComponentID": "3006138",
+                "AddressUsageType": "3",
+                "AddressUsageValue": "Business",
+                "AddressLineOne": "ATTN JOHN FORBES",
+                "AddressLineTwo": "2421 S NAPPANEE ST SUITE B",
+                "City": "ELKHART",
+                "StateType": "1000018",
+                "StateValue": "TX",
+                "CountryType": "185",
+                "CountryValue": "UNITED STATES",
+                "ZipPostalCode": "465171302",
+                "CountyCode": "039"
+              },
+              "KeyContactMethodBObj": [
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "2",
+                  "ContactMethodUsageValue": "Business Telephone",
+                  "ReferenceNumber": "5742955223",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "5223"
+                  }
+                },
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "1000003",
+                  "ContactMethodUsageValue": "Fax",
+                  "Fax": "5742959998",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "9998"
+                  }
+                },
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "1",
+                  "ContactMethodUsageValue": "Home Telephone",
+                  "ReferenceNumber": "5742950522",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "0522"
+                  }
+                }
+              ],
+              "KeyContactEquivalentBObj": [
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000009",
+                  "AdminSystemValue": "sss",
+                  "AdminPartyId": "990011790",
+                  "StartDate": "2004-02-25 00:00:00",
+                  "EndDate": "2019-05-14 04:23:08.107403"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "TxResponse": {
+        "RequestType": "SearchCustomerByIdentifierDetails",
+        "TxResult": {
+          "ResultCode": "SUCCESS"
+        },
+        "ResponseObject": {
+          "KeyPartySearchResultBObj": {
+            "ComponentID": "5100350",
+            "DWLStatus": {
+              "Status": "0"
+            },
+            "KeyPartySearchParamBObj": {
+              "ComponentID": "5100390",
+              "IdentificationType": "2",
+              "IdentificationNum": "341915235",
+              "PartyInquiryLevel": "5",
+              "MaxReturn": "100"
+            },
+            "KeyPartyBObj": {
+              "ComponentID": "3006155",
+              "PartyType": "O",
+              "StartDate": "2000-02-23 00:00:00",
+              "ClientStatusType": "1000003",
+              "ClientStatusValue": "In-Active",
+              "MDMID": "cxbfh8888888909",
+              "KeyOrganizationNameBObj": {
+                "ComponentID": "3006133",
+                "NameUsageType": "1",
+                "NameUsageValue": "Legal",
+                "OrganizationName": "JPMORGAN BROOKLYN"
+              },
+              "KeyIdentifierBObj": [
+                {
+                  "ComponentID": "3006135",
+                  "IdentifierType": "2",
+                  "IdentifierValue": "TIN",
+                  "IdentifierNumber": "*********"
+                },
+                {
+                  "ComponentID": "3006135",
+                  "IdentifierType": "12",
+                  "IdentifierValue": "DUNS",
+                  "IdentifierNumber": "150660439",
+                  "IdentifierStatusType": "2",
+                  "IdentifierStatusValue": "Active"
+                }
+              ],
+              "KeyAddressBObj": {
+                "ComponentID": "3006138",
+                "AddressUsageType": "3",
+                "AddressUsageValue": "Business",
+                "AddressLineOne": "ATTN JOHN FORBES",
+                "AddressLineTwo": "2421 S NAPPANEE ST SUITE B",
+                "City": "HYDERBAD",
+                "StateType": "1000018",
+                "StateValue": "IN",
+                "CountryType": "185",
+                "CountryValue": "UNITED STATES",
+                "ZipPostalCode": "465171302",
+                "CountyCode": "039"
+              },
+              "KeyContactMethodBObj": [
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "2",
+                  "ContactMethodUsageValue": "Business Telephone",
+                  "ReferenceNumber": "5742955223",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "5223"
+                  }
+                },
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "1000003",
+                  "ContactMethodUsageValue": "Fax",
+                  "Fax": "5742959998",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "9998"
+                  }
+                },
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "1",
+                  "ContactMethodUsageValue": "Home Telephone",
+                  "ReferenceNumber": "5742950522",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "0522"
+                  }
+                }
+              ],
+              "KeyContactEquivalentBObj": [
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000009",
+                  "AdminSystemValue": "ENT",
+                  "AdminPartyId": "990011790",
+                  "StartDate": "2004-02-25 00:00:00",
+                  "EndDate": "2019-05-14 04:23:08.107403"
+                },
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000001",
+                  "AdminSystemValue": "ggg",
+                  "AdminPartyId": "0828R3C3169TJ",
+                  "StartDate": "2013-10-28 12:00:37.287"
+                },
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000003",
+                  "AdminSystemValue": "ggg",
+                  "AdminPartyId": "18167749",
+                  "StartDate": "2000-02-23 00:00:00"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}
+)
+[INFO ] 2019-05-21 11:51:42.369 [{}] Sender - Sending a message.
+[INFO ] 2019-05-21 11:51:42.520 [{}] Listener - Received message ActiveMQTextMessage {commandId = 5, responseRequired = true, messageId = ID:BLRLPTJAVA-37245-1558417443049-3:7:1:1:1, originalDestination = null, originalTransactionId = null, producerId = ID:BLRLPTJAVA-37245-1558417443049-3:7:1:1, destination = queue://OUT_2, transactionId = null, expiration = 0, timestamp = 1558419702516, arrival = 0, brokerInTime = 1558419702518, brokerOutTime = 1558419702518, correlationId = null, replyTo = null, persistent = true, type = null, priority = 4, groupID = null, groupSequence = 0, targetConsumerId = null, compressed = false, userID = null, content = org.apache.activemq.util.ByteSequence@7fd9aaf6, marshalledProperties = org.apache.activemq.util.ByteSequence@1d0ba407, dataStructure = null, redeliveryCounter = 0, size = 0, properties = {breadcrumbId=ID:BLRLPTJAVA-37809-1558419472458-1:5:1:1:1, CamelJmsDeliveryMode=2}, readOnlyProperties = true, readOnlyBody = true, droppable = false, jmsXGroupFirstForConsumer = false, text = {"companyId":["0828R3C3169TJ","cxbfh888888890...08.107403"}}}
+[INFO ] 2019-05-21 11:51:47.503 [{}] ProfileService - Listener response :: {"companyId":["0828R3C3169TJ","cxbfh8888888909"],"companyStatus":["Active","In-Active"],"companyName":["JPMORGAN NEYWORK","JPMORGAN BROOKLYN"],"companyCity":["ELKHART","HYDERBAD"],"companyState":["TX","IN"],"EquivalentBObj":{"ComponentID":"3006145","AdminSystemType":"1000009","AdminSystemValue":"ENT","AdminPartyId":"990011790","StartDate":"2004-02-25 00:00:00","EndDate":"2019-05-14 04:23:08.107403"}}
+[ERROR] 2019-05-21 11:51:53.753 [{}] GlobalExceptionHandler - java.lang.IllegalStateException: Expected BEGIN_ARRAY but was BEGIN_OBJECT at line 1 column 226 path $.EquivalentBObj
+[INFO ] 2019-05-21 12:01:48.644 [{}] ProfileController - ProfileController :: processProfileDetails() :: Request ProfileRequest(orgName=WELLSFARGO, orgId=null)
+[INFO ] 2019-05-21 12:01:48.644 [{}] ProfileService - ProfileService :: processProfileDetails() :: Init
+[INFO ] 2019-05-21 12:01:48.645 [{}] ProfileService - Before replace :: {
+  "TCRMService": {
+    "@schemaLocation": "http://www.ibm.com/mdm/schema MDMDomains.xsd",
+    "RequestControl": {
+      "requestID": "10015",
+      "DWLControl": {
+        "requesterName": "cusadmin",
+        "requesterLanguage": "100"
+      }
+    },
+    "TCRMTx": {
+      "TCRMTxType": "SearchCustomerByIdentifierDetails",
+      "TCRMTxObject": "KeyPartySearchBObj",
+      "TCRMObject": {
+        "KeyPartySearchBObj": {
+          "PartyInquiryLevel": "0",
+          "MaxReturn": "100",
+          "KeyOrganizationSearchBObj": 
+          { 
+          	"OrganizationName": "${orgName}$" ,
+          	"OrganizationId": "${orgId}$" 
+          }
+
+        }
+      }
+    }
+  }
+}
+
+
+[INFO ] 2019-05-21 12:01:48.646 [{}] ProfileService - After replace :: {
+  "TCRMService": {
+    "@schemaLocation": "http://www.ibm.com/mdm/schema MDMDomains.xsd",
+    "RequestControl": {
+      "requestID": "10015",
+      "DWLControl": {
+        "requesterName": "cusadmin",
+        "requesterLanguage": "100"
+      }
+    },
+    "TCRMTx": {
+      "TCRMTxType": "SearchCustomerByIdentifierDetails",
+      "TCRMTxObject": "KeyPartySearchBObj",
+      "TCRMObject": {
+        "KeyPartySearchBObj": {
+          "PartyInquiryLevel": "0",
+          "MaxReturn": "100",
+          "KeyOrganizationSearchBObj": 
+          { 
+          	"OrganizationName": "WELLSFARGO" ,
+          	"OrganizationId": "${orgId}$" 
+          }
+
+        }
+      }
+    }
+  }
+}
+
+
+[INFO ] 2019-05-21 12:01:48.781 [{}] ProfileService - Response from MDM service :: ProfileResponse(status=200, statusMessage=StatusMessage(code=SUCCESS, description=Company profile details processed successfully.), response=null, data={
+  "TCRMService": [
+    {
+      "TxResponse": {
+        "RequestType": "SearchCustomerByIdentifierDetails",
+        "TxResult": {
+          "ResultCode": "SUCCESS"
+        },
+        "ResponseObject": {
+          "KeyPartySearchResultBObj": {
+            "ComponentID": "5100350",
+            "DWLStatus": {
+              "Status": "0"
+            },
+            "KeyPartySearchParamBObj": {
+              "ComponentID": "5100390",
+              "IdentificationType": "2",
+              "IdentificationNum": "341915235",
+              "PartyInquiryLevel": "5",
+              "MaxReturn": "100"
+            },
+            "KeyPartyBObj": {
+              "ComponentID": "3006155",
+              "PartyType": "O",
+              "StartDate": "2000-02-23 00:00:00",
+              "ClientStatusType": "1000003",
+              "ClientStatusValue": "Active",
+              "MDMID": "0828R3C3169TJ",
+              "KeyOrganizationNameBObj": {
+                "ComponentID": "3006133",
+                "NameUsageType": "1",
+                "NameUsageValue": "Legal",
+                "OrganizationName": "WELLSFARGO NEYWORK"
+              },
+              "KeyIdentifierBObj": [
+                {
+                  "ComponentID": "3006135",
+                  "IdentifierType": "2",
+                  "IdentifierValue": "TIN",
+                  "IdentifierNumber": "*********"
+                },
+                {
+                  "ComponentID": "3006135",
+                  "IdentifierType": "12",
+                  "IdentifierValue": "DUNS",
+                  "IdentifierNumber": "150660439",
+                  "IdentifierStatusType": "2",
+                  "IdentifierStatusValue": "Active"
+                }
+              ],
+              "KeyAddressBObj": {
+                "ComponentID": "3006138",
+                "AddressUsageType": "3",
+                "AddressUsageValue": "Business",
+                "AddressLineOne": "ATTN JOHN FORBES",
+                "AddressLineTwo": "2421 S NAPPANEE ST SUITE B",
+                "City": "ELKHART",
+                "StateType": "1000018",
+                "StateValue": "TX",
+                "CountryType": "185",
+                "CountryValue": "UNITED STATES",
+                "ZipPostalCode": "465171302",
+                "CountyCode": "039"
+              },
+              "KeyContactMethodBObj": [
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "2",
+                  "ContactMethodUsageValue": "Business Telephone",
+                  "ReferenceNumber": "5742955223",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "5223"
+                  }
+                },
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "1000003",
+                  "ContactMethodUsageValue": "Fax",
+                  "Fax": "5742959998",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "9998"
+                  }
+                },
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "1",
+                  "ContactMethodUsageValue": "Home Telephone",
+                  "ReferenceNumber": "5742950522",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "0522"
+                  }
+                }
+              ],
+              "KeyContactEquivalentBObj": [
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000009",
+                  "AdminSystemValue": "ENT",
+                  "AdminPartyId": "990011790",
+                  "StartDate": "2004-02-25 00:00:00",
+                  "EndDate": "2019-05-14 04:23:08.107403"
+                },
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000001",
+                  "AdminSystemValue": "MDM",
+                  "AdminPartyId": "0828R3C3169TJ",
+                  "StartDate": "2013-10-28 12:00:37.287"
+                },
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000003",
+                  "AdminSystemValue": "CIX",
+                  "AdminPartyId": "18167749",
+                  "StartDate": "2000-02-23 00:00:00"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "TxResponse": {
+        "RequestType": "SearchCustomerByIdentifierDetails",
+        "TxResult": {
+          "ResultCode": "SUCCESS"
+        },
+        "ResponseObject": {
+          "KeyPartySearchResultBObj": {
+            "ComponentID": "5100350",
+            "DWLStatus": {
+              "Status": "0"
+            },
+            "KeyPartySearchParamBObj": {
+              "ComponentID": "5100390",
+              "IdentificationType": "2",
+              "IdentificationNum": "341915235",
+              "PartyInquiryLevel": "5",
+              "MaxReturn": "100"
+            },
+            "KeyPartyBObj": {
+              "ComponentID": "3006155",
+              "PartyType": "O",
+              "StartDate": "2000-02-23 00:00:00",
+              "ClientStatusType": "1000003",
+              "ClientStatusValue": "In-Active",
+              "MDMID": "cxbfh8888888909",
+              "KeyOrganizationNameBObj": {
+                "ComponentID": "3006133",
+                "NameUsageType": "1",
+                "NameUsageValue": "Legal",
+                "OrganizationName": "WELLSFARGO BROOKLYN"
+              },
+              "KeyIdentifierBObj": [
+                {
+                  "ComponentID": "3006135",
+                  "IdentifierType": "2",
+                  "IdentifierValue": "TIN",
+                  "IdentifierNumber": "*********"
+                },
+                {
+                  "ComponentID": "3006135",
+                  "IdentifierType": "12",
+                  "IdentifierValue": "DUNS",
+                  "IdentifierNumber": "150660439",
+                  "IdentifierStatusType": "2",
+                  "IdentifierStatusValue": "Active"
+                }
+              ],
+              "KeyAddressBObj": {
+                "ComponentID": "3006138",
+                "AddressUsageType": "3",
+                "AddressUsageValue": "Business",
+                "AddressLineOne": "ATTN JOHN FORBES",
+                "AddressLineTwo": "2421 S NAPPANEE ST SUITE B",
+                "City": "HYDERBAD",
+                "StateType": "1000018",
+                "StateValue": "IN",
+                "CountryType": "185",
+                "CountryValue": "UNITED STATES",
+                "ZipPostalCode": "465171302",
+                "CountyCode": "039"
+              },
+              "KeyContactMethodBObj": [
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "2",
+                  "ContactMethodUsageValue": "Business Telephone",
+                  "ReferenceNumber": "5742955223",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "5223"
+                  }
+                },
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "1000003",
+                  "ContactMethodUsageValue": "Fax",
+                  "Fax": "5742959998",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "9998"
+                  }
+                },
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "1",
+                  "ContactMethodUsageValue": "Home Telephone",
+                  "ReferenceNumber": "5742950522",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "0522"
+                  }
+                }
+              ],
+              "KeyContactEquivalentBObj": [
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000009",
+                  "AdminSystemValue": "ENT",
+                  "AdminPartyId": "990011790",
+                  "StartDate": "2004-02-25 00:00:00",
+                  "EndDate": "2019-05-14 04:23:08.107403"
+                },
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000001",
+                  "AdminSystemValue": "MDM",
+                  "AdminPartyId": "0828R3C3169TJ",
+                  "StartDate": "2013-10-28 12:00:37.287"
+                },
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000003",
+                  "AdminSystemValue": "CIX",
+                  "AdminPartyId": "18167749",
+                  "StartDate": "2000-02-23 00:00:00"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}
+)
+[INFO ] 2019-05-21 12:01:48.782 [{}] Sender - Sending a message.
+[INFO ] 2019-05-21 12:01:48.947 [{}] Listener - Received message ActiveMQTextMessage {commandId = 5, responseRequired = true, messageId = ID:BLRLPTJAVA-37245-1558417443049-3:8:1:1:1, originalDestination = null, originalTransactionId = null, producerId = ID:BLRLPTJAVA-37245-1558417443049-3:8:1:1, destination = queue://OUT_2, transactionId = null, expiration = 0, timestamp = 1558420308907, arrival = 0, brokerInTime = 1558420308907, brokerOutTime = 1558420308937, correlationId = null, replyTo = null, persistent = true, type = null, priority = 4, groupID = null, groupSequence = 0, targetConsumerId = null, compressed = false, userID = null, content = org.apache.activemq.util.ByteSequence@5ba8f0c1, marshalledProperties = org.apache.activemq.util.ByteSequence@30427f6, dataStructure = null, redeliveryCounter = 0, size = 0, properties = {breadcrumbId=ID:BLRLPTJAVA-37809-1558419472458-1:6:1:1:1, CamelJmsDeliveryMode=2}, readOnlyProperties = true, readOnlyBody = true, droppable = false, jmsXGroupFirstForConsumer = false, text = {"companyId":["0828R3C3169TJ","cxbfh888888890...8.107403"}]}}
+[INFO ] 2019-05-21 12:01:53.906 [{}] ProfileService - Listener response :: {"companyId":["0828R3C3169TJ","cxbfh8888888909"],"companyStatus":["Active","In-Active"],"companyName":["WELLSFARGO NEYWORK","WELLSFARGO BROOKLYN"],"companyCity":["ELKHART","HYDERBAD"],"companyState":["TX","IN"],"EquivalentBObj":[{"ComponentID":"3006145","AdminSystemType":"1000009","AdminSystemValue":"ENT","AdminPartyId":"990011790","StartDate":"2004-02-25 00:00:00","EndDate":"2019-05-14 04:23:08.107403"},{"ComponentID":"3006145","AdminSystemType":"1000009","AdminSystemValue":"ENT","AdminPartyId":"990011790","StartDate":"2004-02-25 00:00:00","EndDate":"2019-05-14 04:23:08.107403"}]}
+[INFO ] 2019-05-21 12:02:11.316 [{}] ProfileService - Transferred bean follows :: QueueResponse(companyId=[0828R3C3169TJ, cxbfh8888888909], companyStatus=[Active, In-Active], companyName=[WELLSFARGO NEYWORK, WELLSFARGO BROOKLYN], companyCity=[ELKHART, HYDERBAD], companyState=[TX, IN], EquivalentBObj=[EquivalentBObj(ComponentID=3006145, AdminSystemType=1000009, AdminSystemValue=ENT, AdminPartyId=990011790, StartDate=2004-02-25 00:00:00, EndDate=2019-05-14 04:23:08.107403), EquivalentBObj(ComponentID=3006145, AdminSystemType=1000009, AdminSystemValue=ENT, AdminPartyId=990011790, StartDate=2004-02-25 00:00:00, EndDate=2019-05-14 04:23:08.107403)])
+[INFO ] 2019-05-21 12:02:11.316 [{}] ProfileService - ProfileService :: processProfileDetails() :: Ends
+[INFO ] 2019-05-21 12:02:11.316 [{}] ProfileController - ProfileController :: processProfileDetails() :: Response ProfileResponse(status=200, statusMessage=StatusMessage(code=SUCCESS, description=Company profile details processed successfully.), response=[ProfileDetails(companyId=0828R3C3169TJ, companyStatus=Active, companyName=WELLSFARGO NEYWORK, companyCity=ELKHART, companyState=TX, equivalentBObj=EquivalentBObj(ComponentID=3006145, AdminSystemType=1000009, AdminSystemValue=ENT, AdminPartyId=990011790, StartDate=2004-02-25 00:00:00, EndDate=2019-05-14 04:23:08.107403)), ProfileDetails(companyId=cxbfh8888888909, companyStatus=In-Active, companyName=WELLSFARGO BROOKLYN, companyCity=HYDERBAD, companyState=IN, equivalentBObj=EquivalentBObj(ComponentID=3006145, AdminSystemType=1000009, AdminSystemValue=ENT, AdminPartyId=990011790, StartDate=2004-02-25 00:00:00, EndDate=2019-05-14 04:23:08.107403))], data=null)
+[INFO ] 2019-05-21 12:02:56.019 [{}] CompanyProfileServiceApplication - Starting CompanyProfileServiceApplication on BLRLPTJAVA with PID 22122 (/home/sasikumarc/mk/KeyBankProfileService/target/classes started by sasikumarc in /home/sasikumarc/mk/KeyBankProfileService)
+[INFO ] 2019-05-21 12:02:56.025 [{}] CompanyProfileServiceApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-05-21 12:02:56.143 [{}] AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6bffbc6d: startup date [Tue May 21 12:02:56 IST 2019]; root of context hierarchy
+[INFO ] 2019-05-21 12:02:57.811 [{}] AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO ] 2019-05-21 12:02:58.466 [{}] TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+[INFO ] 2019-05-21 12:02:58.508 [{}] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+[INFO ] 2019-05-21 12:02:58.519 [{}] StandardService - Starting service [Tomcat]
+[INFO ] 2019-05-21 12:02:58.521 [{}] StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.29
+[INFO ] 2019-05-21 12:02:58.541 [{}] AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+[INFO ] 2019-05-21 12:02:58.656 [{}] [/keybank/api] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-05-21 12:02:58.656 [{}] ContextLoader - Root WebApplicationContext: initialization completed in 2513 ms
+[INFO ] 2019-05-21 12:02:58.890 [{}] ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+[INFO ] 2019-05-21 12:02:58.895 [{}] FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+[INFO ] 2019-05-21 12:02:58.896 [{}] FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[INFO ] 2019-05-21 12:02:58.896 [{}] FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[INFO ] 2019-05-21 12:02:58.899 [{}] FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+[INFO ] 2019-05-21 12:02:59.552 [{}] RequestMappingHandlerMapping - Mapped "{[/v1/profile-details],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.keybank.profile.io.ProfileResponse> com.keybank.profile.controller.ProfileController.processProfileDetails(com.keybank.profile.io.ProfileRequest) throws java.lang.Exception
+[INFO ] 2019-05-21 12:02:59.555 [{}] RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+[INFO ] 2019-05-21 12:02:59.561 [{}] RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+[INFO ] 2019-05-21 12:02:59.562 [{}] RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+[INFO ] 2019-05-21 12:02:59.564 [{}] RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+[INFO ] 2019-05-21 12:02:59.569 [{}] RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[INFO ] 2019-05-21 12:02:59.569 [{}] RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[INFO ] 2019-05-21 12:02:59.872 [{}] SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 2019-05-21 12:03:00.082 [{}] RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6bffbc6d: startup date [Tue May 21 12:02:56 IST 2019]; root of context hierarchy
+[INFO ] 2019-05-21 12:03:00.222 [{}] SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 2019-05-21 12:03:00.222 [{}] SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 2019-05-21 12:03:00.237 [{}] ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in globalExceptionHandler
+[INFO ] 2019-05-21 12:03:00.465 [{}] AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+[INFO ] 2019-05-21 12:03:00.475 [{}] DefaultLifecycleProcessor - Starting beans in phase 2147483647
+[INFO ] 2019-05-21 12:03:00.475 [{}] DocumentationPluginsBootstrapper - Context refreshed
+[INFO ] 2019-05-21 12:03:00.487 [{}] DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+[INFO ] 2019-05-21 12:03:00.497 [{}] ApiListingReferenceScanner - Scanning for api listing references
+[INFO ] 2019-05-21 12:03:00.811 [{}] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+[INFO ] 2019-05-21 12:03:00.817 [{}] NioSelectorPool - Using a shared selector for servlet write/read
+[INFO ] 2019-05-21 12:03:00.838 [{}] TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/keybank/api'
+[INFO ] 2019-05-21 12:03:00.844 [{}] CompanyProfileServiceApplication - Started CompanyProfileServiceApplication in 5.768 seconds (JVM running for 7.597)
+[INFO ] 2019-05-21 12:54:35.909 [{}] CompanyProfileServiceApplication - Starting CompanyProfileServiceApplication on BLRLPTJAVA with PID 10902 (/home/sasikumarc/mk/KeyBankProfileService/target/classes started by sasikumarc in /home/sasikumarc/mk/KeyBankProfileService)
+[INFO ] 2019-05-21 12:54:35.934 [{}] CompanyProfileServiceApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-05-21 12:54:36.040 [{}] AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1c481ff2: startup date [Tue May 21 12:54:36 IST 2019]; root of context hierarchy
+[INFO ] 2019-05-21 12:54:37.294 [{}] AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO ] 2019-05-21 12:54:37.618 [{}] TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+[INFO ] 2019-05-21 12:54:37.639 [{}] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+[INFO ] 2019-05-21 12:54:37.648 [{}] StandardService - Starting service [Tomcat]
+[INFO ] 2019-05-21 12:54:37.648 [{}] StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.29
+[INFO ] 2019-05-21 12:54:37.655 [{}] AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+[INFO ] 2019-05-21 12:54:37.715 [{}] [/keybank/api] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-05-21 12:54:37.715 [{}] ContextLoader - Root WebApplicationContext: initialization completed in 1676 ms
+[INFO ] 2019-05-21 12:54:37.824 [{}] ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+[INFO ] 2019-05-21 12:54:37.829 [{}] FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+[INFO ] 2019-05-21 12:54:37.829 [{}] FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[INFO ] 2019-05-21 12:54:37.829 [{}] FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[INFO ] 2019-05-21 12:54:37.829 [{}] FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+[INFO ] 2019-05-21 12:54:38.273 [{}] RequestMappingHandlerMapping - Mapped "{[/v1/profile-details],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.keybank.profile.io.ProfileResponse> com.keybank.profile.controller.ProfileController.processProfileDetails(com.keybank.profile.io.ProfileRequest) throws java.lang.Exception
+[INFO ] 2019-05-21 12:54:38.275 [{}] RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+[INFO ] 2019-05-21 12:54:38.278 [{}] RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+[INFO ] 2019-05-21 12:54:38.279 [{}] RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+[INFO ] 2019-05-21 12:54:38.279 [{}] RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+[INFO ] 2019-05-21 12:54:38.282 [{}] RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[INFO ] 2019-05-21 12:54:38.283 [{}] RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[INFO ] 2019-05-21 12:54:38.486 [{}] SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 2019-05-21 12:54:38.882 [{}] RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1c481ff2: startup date [Tue May 21 12:54:36 IST 2019]; root of context hierarchy
+[INFO ] 2019-05-21 12:54:38.945 [{}] SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 2019-05-21 12:54:38.946 [{}] SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 2019-05-21 12:54:38.962 [{}] ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in globalExceptionHandler
+[INFO ] 2019-05-21 12:54:39.193 [{}] AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+[INFO ] 2019-05-21 12:54:39.207 [{}] DefaultLifecycleProcessor - Starting beans in phase 2147483647
+[INFO ] 2019-05-21 12:54:39.207 [{}] DocumentationPluginsBootstrapper - Context refreshed
+[INFO ] 2019-05-21 12:54:39.226 [{}] DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+[INFO ] 2019-05-21 12:54:39.407 [{}] ApiListingReferenceScanner - Scanning for api listing references
+[INFO ] 2019-05-21 12:54:39.820 [{}] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+[INFO ] 2019-05-21 12:54:39.825 [{}] NioSelectorPool - Using a shared selector for servlet write/read
+[INFO ] 2019-05-21 12:54:39.839 [{}] TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/keybank/api'
+[INFO ] 2019-05-21 12:54:39.844 [{}] CompanyProfileServiceApplication - Started CompanyProfileServiceApplication in 4.406 seconds (JVM running for 5.418)
+[INFO ] 2019-05-21 12:54:55.903 [{}] [/keybank/api] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+[INFO ] 2019-05-21 12:54:55.903 [{}] DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+[INFO ] 2019-05-21 12:54:55.920 [{}] DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
+[INFO ] 2019-05-21 12:54:55.981 [{}] ProfileController - ProfileController :: processProfileDetails() :: Request ProfileRequest(orgName=JPMORGAN, orgId=null)
+[INFO ] 2019-05-21 12:54:55.981 [{}] ProfileService - ProfileService :: processProfileDetails() :: Init
+[INFO ] 2019-05-21 12:54:55.982 [{}] ProfileService - Before replace :: {
+  "TCRMService": {
+    "@schemaLocation": "http://www.ibm.com/mdm/schema MDMDomains.xsd",
+    "RequestControl": {
+      "requestID": "10015",
+      "DWLControl": {
+        "requesterName": "cusadmin",
+        "requesterLanguage": "100"
+      }
+    },
+    "TCRMTx": {
+      "TCRMTxType": "SearchCustomerByIdentifierDetails",
+      "TCRMTxObject": "KeyPartySearchBObj",
+      "TCRMObject": {
+        "KeyPartySearchBObj": {
+          "PartyInquiryLevel": "0",
+          "MaxReturn": "100",
+          "KeyOrganizationSearchBObj": 
+          { 
+          	"OrganizationName": "${orgName}$" ,
+          	"OrganizationId": "${orgId}$" 
+          }
+
+        }
+      }
+    }
+  }
+}
+
+
+[INFO ] 2019-05-21 12:54:55.984 [{}] ProfileService - After replace :: {
+  "TCRMService": {
+    "@schemaLocation": "http://www.ibm.com/mdm/schema MDMDomains.xsd",
+    "RequestControl": {
+      "requestID": "10015",
+      "DWLControl": {
+        "requesterName": "cusadmin",
+        "requesterLanguage": "100"
+      }
+    },
+    "TCRMTx": {
+      "TCRMTxType": "SearchCustomerByIdentifierDetails",
+      "TCRMTxObject": "KeyPartySearchBObj",
+      "TCRMObject": {
+        "KeyPartySearchBObj": {
+          "PartyInquiryLevel": "0",
+          "MaxReturn": "100",
+          "KeyOrganizationSearchBObj": 
+          { 
+          	"OrganizationName": "JPMORGAN" ,
+          	"OrganizationId": "${orgId}$" 
+          }
+
+        }
+      }
+    }
+  }
+}
+
+
+[ERROR] 2019-05-21 12:55:03.163 [{}] GlobalExceptionHandler - java.lang.IllegalStateException: Expected BEGIN_OBJECT but was BEGIN_ARRAY at line 2 column 19 path $.TCRMService

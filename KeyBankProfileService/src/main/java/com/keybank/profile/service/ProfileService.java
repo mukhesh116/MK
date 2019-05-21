@@ -16,12 +16,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.keybank.profile.io.MDMBaseProfileDetails;
-import com.keybank.profile.io.MDMProfileResponse;
-import com.keybank.profile.io.MDMProfileResponse.KeyContactEquivalentBObj;
+import com.google.gson.Gson;
 import com.keybank.profile.io.MDMRequest;
 import com.keybank.profile.io.ProfileDetails;
 import com.keybank.profile.io.ProfileRequest;
@@ -48,8 +43,12 @@ public class ProfileService {
 		//Input code
 		String inputData = readInput();
 		log.info("Before replace :: " + inputData);
-		inputData = inputData.replace("${orgName}$", request.getOrgName());
-		inputData = inputData.replace("${orgType}$", request.getOrgId());
+		if(!StringUtils.isEmpty(request.getOrgName())) {
+			inputData = inputData.replace("${orgName}$", request.getOrgName());
+		}
+		if(!StringUtils.isEmpty(request.getOrgId())) {
+			inputData = inputData.replace("${orgType}$", request.getOrgId());	
+		}
 		log.info("After replace :: " + inputData);
 		//MDM rest api call invocation
 		MDMRequest mdmRequest = MDMRequest.builder().data(inputData).build();
@@ -57,11 +56,8 @@ public class ProfileService {
 				HttpMethod.POST,mdmRequest, ProfileResponse.class);
 		ProfileResponse mdmMesponse = (ProfileResponse) responseEntity.getBody();
 		String processData = mdmMesponse.getData();
+		Gson Gson = new Gson();
 		log.info("Response from MDM service :: " + mdmMesponse.toString());
-		ObjectMapper mapper = new ObjectMapper();
-		mapper.enable(DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT);
-		//MDMBaseProfileDetails mdmBaseProfileDetail =  mapper.readValue(processData,MDMBaseProfileDetails.class);
-		//processData = enhanceStatus(mdmBaseProfileDetail);
 		sender.processSendingQueue(processData);
 		try {
             Thread.sleep(5000);
@@ -69,7 +65,7 @@ public class ProfileService {
             log.error("LOG exception ",e);
         }
 		log.info("Listener response :: " +Listener.queueResponse);
-		QueueResponse transformedMap =  mapper.readValue(Listener.queueResponse,QueueResponse.class);
+		QueueResponse transformedMap = Gson.fromJson(Listener.queueResponse,QueueResponse.class);
 		log.info("Transferred bean follows :: " + transformedMap);
 		//output preparation code
 		ProfileDetails tcmResponse = null;
@@ -82,6 +78,7 @@ public class ProfileService {
 					.companyName(transformedMap.getCompanyName().get(i))
 					.companyState(transformedMap.getCompanyState().get(i))
 					.companyStatus(transformedMap.getCompanyStatus().get(i))
+					.equivalentBObj(transformedMap.getEquivalentBObj().get(i))
 					.build();
 			TCMResponses.add(tcmResponse);
 		}
@@ -93,22 +90,6 @@ public class ProfileService {
 				.build();
 	}
 
-	public String enhanceStatus(MDMBaseProfileDetails mdmBaseProfileDetails) throws JsonProcessingException {
-		KeyContactEquivalentBObj KeyContactEquivalentBObj = null;
-		for (MDMProfileResponse mDMProfileResponse : mdmBaseProfileDetails.getTCRMService().getTxResponse()) {
-			KeyContactEquivalentBObj = mDMProfileResponse.getKeyPartySearchResultBObj().getKeyPartyBObj().get(0).
-					getKeyContactEquivalentBObj().get(0);
-			if(KeyContactEquivalentBObj.getAdminSystemValue().equalsIgnoreCase("ENT") && 
-					!StringUtils.isEmpty(KeyContactEquivalentBObj.getEndDate()) ) {
-				mDMProfileResponse.getKeyPartySearchResultBObj().getKeyPartyBObj().get(0).setClientStatusValue("In-Active");
-			}
-		}
-		ObjectMapper mapper = new ObjectMapper();
-		mapper.enable(DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT);
-		return mapper.writeValueAsString(mdmBaseProfileDetails);
-	}
-	
-	
 	private String readInput() throws IOException  {
 		String data = "";
 		ClassPathResource cpr = new ClassPathResource("/reference/input.json");
@@ -126,4 +107,19 @@ public class ProfileService {
         log.debug(" Response from lifafa call :: "+response);
         return response;
 	}
+	
+	/*public String enhanceStatus(MDMBaseProfileDetails mdmBaseProfileDetails) throws JsonProcessingException {
+		KeyContactEquivalentBObj KeyContactEquivalentBObj = null;
+		for (MDMProfileResponse mDMProfileResponse : mdmBaseProfileDetails.getTCRMService().getTxResponse()) {
+			KeyContactEquivalentBObj = mDMProfileResponse.getKeyPartySearchResultBObj().getKeyPartyBObj().get(0).
+					getKeyContactEquivalentBObj().get(0);
+			if(KeyContactEquivalentBObj.getAdminSystemValue().equalsIgnoreCase("ENT") && 
+					!StringUtils.isEmpty(KeyContactEquivalentBObj.getEndDate()) ) {
+				mDMProfileResponse.getKeyPartySearchResultBObj().getKeyPartyBObj().get(0).setClientStatusValue("In-Active");
+			}
+		}
+		ObjectMapper mapper = new ObjectMapper();
+		mapper.enable(DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT);
+		return mapper.writeValueAsString(mdmBaseProfileDetails);
+	}*/
 }

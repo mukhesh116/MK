@@ -110,24 +110,10 @@
                 {
                   "ComponentID": "3006145",
                   "AdminSystemType": "1000009",
-                  "AdminSystemValue": "ggg",
+                  "AdminSystemValue": "sss",
                   "AdminPartyId": "990011790",
                   "StartDate": "2004-02-25 00:00:00",
                   "EndDate": "2019-05-14 04:23:08.107403"
-                },
-                {
-                  "ComponentID": "3006145",
-                  "AdminSystemType": "1000001",
-                  "AdminSystemValue": "MDM",
-                  "AdminPartyId": "0828R3C3169TJ",
-                  "StartDate": "2013-10-28 12:00:37.287"
-                },
-                {
-                  "ComponentID": "3006145",
-                  "AdminSystemType": "1000003",
-                  "AdminSystemValue": "CIX",
-                  "AdminPartyId": "18167749",
-                  "StartDate": "2000-02-23 00:00:00"
                 }
               ]
             }
@@ -245,7 +231,7 @@
                 {
                   "ComponentID": "3006145",
                   "AdminSystemType": "1000009",
-                  "AdminSystemValue": "ggg",
+                  "AdminSystemValue": "ENT",
                   "AdminPartyId": "990011790",
                   "StartDate": "2004-02-25 00:00:00",
                   "EndDate": "2019-05-14 04:23:08.107403"
@@ -253,14 +239,14 @@
                 {
                   "ComponentID": "3006145",
                   "AdminSystemType": "1000001",
-                  "AdminSystemValue": "MDM",
+                  "AdminSystemValue": "ggg",
                   "AdminPartyId": "0828R3C3169TJ",
                   "StartDate": "2013-10-28 12:00:37.287"
                 },
                 {
                   "ComponentID": "3006145",
                   "AdminSystemType": "1000003",
-                  "AdminSystemValue": "CIX",
+                  "AdminSystemValue": "ggg",
                   "AdminPartyId": "18167749",
                   "StartDate": "2000-02-23 00:00:00"
                 }
