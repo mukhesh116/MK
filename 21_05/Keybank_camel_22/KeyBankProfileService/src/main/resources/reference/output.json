@@ -1,0 +1,274 @@
+{
+  "TCRMService": [
+    {
+      "TxResponse": {
+        "RequestType": "SearchCustomerByIdentifierDetails",
+        "TxResult": {
+          "ResultCode": "SUCCESS"
+        },
+        "ResponseObject": {
+          "KeyPartySearchResultBObj": {
+            "ComponentID": "5100350",
+            "DWLStatus": {
+              "Status": "0"
+            },
+            "KeyPartySearchParamBObj": {
+              "ComponentID": "5100390",
+              "IdentificationType": "2",
+              "IdentificationNum": "341915235",
+              "PartyInquiryLevel": "5",
+              "MaxReturn": "100"
+            },
+            "KeyPartyBObj": {
+              "ComponentID": "3006155",
+              "PartyType": "O",
+              "StartDate": "2000-02-23 00:00:00",
+              "ClientStatusType": "1000003",
+              "ClientStatusValue": "Active",
+              "MDMID": "0828R3C3169TJ",
+              "KeyOrganizationNameBObj": {
+                "ComponentID": "3006133",
+                "NameUsageType": "1",
+                "NameUsageValue": "Legal",
+                "OrganizationName": "SASIIIIIIII LLC"
+              },
+              "KeyIdentifierBObj": [
+                {
+                  "ComponentID": "3006135",
+                  "IdentifierType": "2",
+                  "IdentifierValue": "TIN",
+                  "IdentifierNumber": "*********"
+                },
+                {
+                  "ComponentID": "3006135",
+                  "IdentifierType": "12",
+                  "IdentifierValue": "DUNS",
+                  "IdentifierNumber": "150660439",
+                  "IdentifierStatusType": "2",
+                  "IdentifierStatusValue": "Active"
+                }
+              ],
+              "KeyAddressBObj": {
+                "ComponentID": "3006138",
+                "AddressUsageType": "3",
+                "AddressUsageValue": "Business",
+                "AddressLineOne": "ATTN JOHN FORBES",
+                "AddressLineTwo": "2421 S NAPPANEE ST SUITE B",
+                "City": "ELKHART",
+                "StateType": "1000018",
+                "StateValue": "TX",
+                "CountryType": "185",
+                "CountryValue": "UNITED STATES",
+                "ZipPostalCode": "465171302",
+                "CountyCode": "039"
+              },
+              "KeyContactMethodBObj": [
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "2",
+                  "ContactMethodUsageValue": "Business Telephone",
+                  "ReferenceNumber": "5742955223",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "5223"
+                  }
+                },
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "1000003",
+                  "ContactMethodUsageValue": "Fax",
+                  "Fax": "5742959998",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "9998"
+                  }
+                },
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "1",
+                  "ContactMethodUsageValue": "Home Telephone",
+                  "ReferenceNumber": "5742950522",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "0522"
+                  }
+                }
+              ],
+              "KeyContactEquivalentBObj": [
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000009",
+                  "AdminSystemValue": "ggg",
+                  "AdminPartyId": "990011790",
+                  "StartDate": "2004-02-25 00:00:00",
+                  "EndDate": "2019-05-14 04:23:08.107403"
+                },
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000001",
+                  "AdminSystemValue": "MDM",
+                  "AdminPartyId": "0828R3C3169TJ",
+                  "StartDate": "2013-10-28 12:00:37.287"
+                },
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000003",
+                  "AdminSystemValue": "CIX",
+                  "AdminPartyId": "18167749",
+                  "StartDate": "2000-02-23 00:00:00"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "TxResponse": {
+        "RequestType": "SearchCustomerByIdentifierDetails",
+        "TxResult": {
+          "ResultCode": "SUCCESS"
+        },
+        "ResponseObject": {
+          "KeyPartySearchResultBObj": {
+            "ComponentID": "5100350",
+            "DWLStatus": {
+              "Status": "0"
+            },
+            "KeyPartySearchParamBObj": {
+              "ComponentID": "5100390",
+              "IdentificationType": "2",
+              "IdentificationNum": "341915235",
+              "PartyInquiryLevel": "5",
+              "MaxReturn": "100"
+            },
+            "KeyPartyBObj": {
+              "ComponentID": "3006155",
+              "PartyType": "O",
+              "StartDate": "2000-02-23 00:00:00",
+              "ClientStatusType": "1000003",
+              "ClientStatusValue": "In-Active",
+              "MDMID": "cxbfh8888888909",
+              "KeyOrganizationNameBObj": {
+                "ComponentID": "3006133",
+                "NameUsageType": "1",
+                "NameUsageValue": "Legal",
+                "OrganizationName": "MKKKKKKK LLC"
+              },
+              "KeyIdentifierBObj": [
+                {
+                  "ComponentID": "3006135",
+                  "IdentifierType": "2",
+                  "IdentifierValue": "TIN",
+                  "IdentifierNumber": "*********"
+                },
+                {
+                  "ComponentID": "3006135",
+                  "IdentifierType": "12",
+                  "IdentifierValue": "DUNS",
+                  "IdentifierNumber": "150660439",
+                  "IdentifierStatusType": "2",
+                  "IdentifierStatusValue": "Active"
+                }
+              ],
+              "KeyAddressBObj": {
+                "ComponentID": "3006138",
+                "AddressUsageType": "3",
+                "AddressUsageValue": "Business",
+                "AddressLineOne": "ATTN JOHN FORBES",
+                "AddressLineTwo": "2421 S NAPPANEE ST SUITE B",
+                "City": "HYDERBAD",
+                "StateType": "1000018",
+                "StateValue": "IN",
+                "CountryType": "185",
+                "CountryValue": "UNITED STATES",
+                "ZipPostalCode": "465171302",
+                "CountyCode": "039"
+              },
+              "KeyContactMethodBObj": [
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "2",
+                  "ContactMethodUsageValue": "Business Telephone",
+                  "ReferenceNumber": "5742955223",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "5223"
+                  }
+                },
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "1000003",
+                  "ContactMethodUsageValue": "Fax",
+                  "Fax": "5742959998",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "9998"
+                  }
+                },
+                {
+                  "ComponentID": "3006142",
+                  "ContactMethodCatType": "1",
+                  "ContactMethodCatValue": "Telephone Number",
+                  "ContactMethodUsageType": "1",
+                  "ContactMethodUsageValue": "Home Telephone",
+                  "ReferenceNumber": "5742950522",
+                  "KeyPhoneNumberBObj": {
+                    "ComponentID": "5100846",
+                    "PhoneAreaCode": "574",
+                    "PhoneExchange": "295",
+                    "PhoneNumber": "0522"
+                  }
+                }
+              ],
+              "KeyContactEquivalentBObj": [
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000009",
+                  "AdminSystemValue": "ggg",
+                  "AdminPartyId": "990011790",
+                  "StartDate": "2004-02-25 00:00:00",
+                  "EndDate": "2019-05-14 04:23:08.107403"
+                },
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000001",
+                  "AdminSystemValue": "MDM",
+                  "AdminPartyId": "0828R3C3169TJ",
+                  "StartDate": "2013-10-28 12:00:37.287"
+                },
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000003",
+                  "AdminSystemValue": "CIX",
+                  "AdminPartyId": "18167749",
+                  "StartDate": "2000-02-23 00:00:00"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}

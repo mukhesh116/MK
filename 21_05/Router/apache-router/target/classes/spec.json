@@ -1,0 +1,41 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "TCRMService": {
+        "*": {
+          "TxResponse": {
+            "ResponseObject": {
+              "*": {
+                "KeyPartyBObj": {
+                  "MDMID": "companyId",
+                  "ClientStatusValue": "companyStatus",
+                  "KeyOrganizationNameBObj": {
+                    "OrganizationName": "companyName"
+                  },
+                  "KeyAddressBObj": {
+                    "City": "companyCity",
+                    "StateValue": "companyState"
+                  },
+                  "KeyContactEquivalentBObj": {
+                    "*": {
+                      "AdminSystemValue": {
+                       "Not Available.": "{}",
+                        "ENT": {
+                          "@2": "EquivalentBObj"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    }
+
+
+
+]

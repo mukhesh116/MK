@@ -1,0 +1,143 @@
+{
+  "TCRMService": {
+    "@noNamespaceSchemaLocation": "tCRMResponse.xsd",
+    "ResponseControl": {
+      "ResultCode": "SUCCESS",
+      "ServiceTime": "19",
+      "DWLControl": {
+        "requesterName": "cusadmin",
+        "requesterLanguage": "100",
+        "requesterLocale": "en",
+        "returnAvailableResultCount": "2",
+        "requestID": "10015"
+      }
+    },
+    "TxResponse": {
+      "RequestType": "SearchCustomerByIdentifierDetails",
+      "TxResult": {
+        "ResultCode": "SUCCESS"
+      },
+      "ResponseObject": {
+        "KeyPartySearchResultBObj": {
+          "ComponentID": "5100350",
+          "DWLStatus": {
+            "Status": "0"
+          },
+          "KeyPartySearchParamBObj": {
+            "ComponentID": "5100390",
+            "PartyInquiryLevel": "1",
+            "MaxReturn": "100",
+            "KeyOrganizationSearchBObj": {
+              "ComponentID": "5100370",
+              "OrganizationName": "SSC CORP"
+            }
+          },
+          "KeyPartyBObj": [         //////////////////ARRAY/////////
+            {
+              "ComponentID": "3006155",
+              "PartyType": "O",
+              "ClientStatusType": "1000004",
+              "ClientStatusValue": "No Account",
+              "MDMID": "0CNB5YS8JD87R",
+              "KeyOrganizationNameBObj": {
+                "ComponentID": "3006133",
+                "NameUsageType": "1",
+                "NameUsageValue": "Legal",
+                "OrganizationName": "SSC CORP"
+              },
+              "KeyIdentifierBObj": {
+                "ComponentID": "3006135",
+                "IdentifierType": "1",
+                "IdentifierValue": "SSN",
+                "IdentifierNumber": "*********"
+              },
+              "KeyContactMethodBObj": {
+                "ComponentID": "3006142",
+                "ContactMethodCatType": "1",
+                "ContactMethodCatValue": "Telephone Number",
+                "ContactMethodUsageType": "2",
+                "ContactMethodUsageValue": "Business Telephone",
+                "ReferenceNumber": "312-100-0000",
+                "KeyPhoneNumberBObj": {
+                  "ComponentID": "5100846"
+                }
+              },
+              "KeyContactEquivalentBObj": [
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000004",
+                  "AdminSystemValue": "CLS",
+                  "AdminPartyId": "312413010"
+                },
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000001",
+                  "AdminSystemValue": "MDM",
+                  "AdminPartyId": "0CNB5YS8JD87R",
+                  "StartDate": "2019-03-18 09:47:49.356"
+                },
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000040",
+                  "AdminSystemValue": "GTM",
+                  "AdminPartyId": "312413010"
+                }
+              ]
+            },
+            {
+              "ComponentID": "3006155",
+              "PartyType": "O",
+              "ClientStatusType": "1000004",
+              "ClientStatusValue": "No Account",
+              "MDMID": "0LKB2MW6K1C77",
+              "KeyOrganizationNameBObj": {
+                "ComponentID": "3006133",
+                "NameUsageType": "1",
+                "NameUsageValue": "Legal",
+                "OrganizationName": "SSC CORP"
+              },
+              "KeyIdentifierBObj": {
+                "ComponentID": "3006135",
+                "IdentifierType": "1",
+                "IdentifierValue": "SSN",
+                "IdentifierNumber": "*********"
+              },
+              "KeyContactMethodBObj": {
+                "ComponentID": "3006142",
+                "ContactMethodCatType": "1",
+                "ContactMethodCatValue": "Telephone Number",
+                "ContactMethodUsageType": "2",
+                "ContactMethodUsageValue": "Business Telephone",
+                "ReferenceNumber": "312-100-0000",
+                "KeyPhoneNumberBObj": {
+                  "ComponentID": "5100846"
+                }
+              },
+              "KeyContactEquivalentBObj": [
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000003",
+                  "AdminSystemValue": "CIX",
+                  "AdminPartyId": "312413002"
+                },
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000001",
+                  "AdminSystemValue": "MDM",
+                  "AdminPartyId": "0LKB2MW6K1C77",
+                  "StartDate": "2019-03-18 08:58:27.425"
+                },
+                {
+                  "ComponentID": "3006145",
+                  "AdminSystemType": "1000040",
+                  "AdminSystemValue": "GTM",
+                  "AdminPartyId": "312413002"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}
