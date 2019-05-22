@@ -557,20 +557,20 @@ SPECCCCCCCCCC:::::::::::::::::;
           "ResponseObject": {
             "*": {
               "KeyPartyBObj": {
-                "MDMID": "companyId",
-                "ClientStatusValue": "companyStatus",
+                "MDMID": "companyId[]",
+                "ClientStatusValue": "companyStatus[]",
                 "KeyOrganizationNameBObj": {
-                  "OrganizationName": "companyName"
+                  "OrganizationName": "companyName[]"
                 },
                 "KeyAddressBObj": {
-                  "City": "companyCity",
-                  "StateValue": "companyState"
+                  "City": "companyCity[]",
+                  "StateValue": "companyState[]"
                 },
                 "KeyContactEquivalentBObj": {
                   "*": {
                     "AdminSystemValue": {
                       "ENT": {
-                        "@2": "EquivalentBObj"
+                        "@2": "EquivalentBObj[]"
                       }
                     }
                   }
@@ -746,20 +746,20 @@ SPECCCCCCCCCCCCCCC::::::::
             "*": {
               "KeyPartyBObj": {
                 "*": {
-                  "MDMID": "companyId",
-                  "ClientStatusValue": "companyStatus",
+                  "MDMID": "companyId[]",
+                  "ClientStatusValue": "companyStatus[]",
                   "KeyOrganizationNameBObj": {
-                    "OrganizationName": "companyName"
+                    "OrganizationName": "companyName[]"
                   },
                   "KeyAddressBObj": {
-                    "City": "companyCity",
-                    "StateValue": "companyState"
+                    "City": "companyCity[]",
+                    "StateValue": "companyState[]"
                   },
                   "KeyContactEquivalentBObj": {
                     "*": {
                       "AdminSystemValue": {
                         "ENT": {
-                          "@2": "EquivalentBObj"
+                          "@2": "EquivalentBObj[]"
                         }
                       }
                     }
