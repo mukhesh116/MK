@@ -1,0 +1,62 @@
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
+import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.serializer.GenericToStringSerializer;
+
+import com.goomo.currency.constants.AppConstant;
+
+import lombok.extern.slf4j.Slf4j;
+import redis.clients.jedis.JedisPoolConfig;
+
+@Configuration("redisConfig")
+@Primary
+@Slf4j
+public class RedisConfig {
+	
+	@Value("${redis.hostname}")
+	private String redisHostName;
+
+	@Value("${redis.port}")
+	private String redisPort;
+	
+	@Value("${spring.profiles.active}")
+	private String domain;
+	
+	@SuppressWarnings("deprecation")
+	@Bean
+    public JedisConnectionFactory jedisConnectionFactory() throws Exception {
+		log.info("RedisConfig :: jedisConnectionFactory() :: Init ");
+		log.info("RedisConfig :: jedisConnectionFactory() :: Domain  " + domain);
+		if (domain != null && !domain.isEmpty() && !domain.equalsIgnoreCase("dev")) {
+			Map<String, String> env = System.getenv();
+			redisHostName = env.get(AppConstant.REDIS_HOST_NAME);
+			redisPort = env.get(AppConstant.REDIS_PORT);
+		}
+		System.out.println("redis host >>> "+redisHostName);
+		System.out.println("redis port >>> "+redisPort);
+		JedisPoolConfig poolConfig = new JedisPoolConfig();
+		poolConfig.setMaxTotal(5);
+		poolConfig.setTestOnBorrow(true);
+		poolConfig.setTestOnReturn(true);
+		JedisConnectionFactory factory = new JedisConnectionFactory(poolConfig);
+		factory.setHostName(redisHostName);
+		factory.setPort(Integer.valueOf(redisPort));
+		factory.setUsePool(true);
+		log.info("RedisConfig :: jedisConnectionFactory() :: Ends ");
+        return factory;
+    }
+	
+	@Bean
+    public RedisTemplate<Object, Object> redisTemplate() throws Exception {
+        final RedisTemplate<Object, Object> template = new RedisTemplate<Object, Object>();
+        template.setConnectionFactory(jedisConnectionFactory());
+        template.setValueSerializer(new GenericToStringSerializer<Object>(Object.class));
+        return template;
+    }
+
+}
