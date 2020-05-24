@@ -1,0 +1,216 @@
+/*package com.goomo.offline.payment.test;
+
+import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.when;
+
+import org.apache.velocity.app.VelocityEngine;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import org.modelmapper.ModelMapper;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.http.ResponseEntity;
+import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringRunner;
+
+import com.goomo.offline.assembler.OfflinePaymentAssembler;
+import com.goomo.offline.config.OfflinePaymentDataSourceModel;
+import com.goomo.offline.constants.MessageCodes;
+import com.goomo.offline.controller.OfflinePaymentController;
+import com.goomo.offline.io.BaseResponse;
+import com.goomo.offline.io.OfflinePaymentRequest;
+import com.goomo.offline.io.OfflinePaymentResponse;
+import com.goomo.offline.repository.OfflinePaymentRepository;
+import com.goomo.offline.repository.OfflineTransactionRepository;
+import com.goomo.offline.service.OfflinePaymentService;
+import com.goomo.offline.util.Mailer;
+import com.goomo.offline.util.PhonOnSMS;
+
+@ActiveProfiles("test")
+@RunWith(SpringRunner.class)
+@WebMvcTest(value = OfflinePaymentController.class)
+@ContextConfiguration(classes= {OfflinePaymentService.class,Mailer.class,PhonOnSMS.class})
+public class OfflinePaymentControllerTest{
+	
+	@InjectMocks
+	OfflinePaymentController controller;
+	
+	@Mock
+	OfflinePaymentService  service;
+	
+	@Mock
+	Mailer mailer;
+	
+	@MockBean
+	OfflinePaymentRepository respository;
+	
+	@MockBean
+	OfflineTransactionRepository transactionRepository;
+	
+	@MockBean
+	OfflinePaymentAssembler offlinePaymentAssembler ;	
+	
+	@MockBean
+	OfflinePaymentDataSourceModel model;
+	
+	@MockBean
+	VelocityEngine velocityEngine;
+	
+	@MockBean
+	ModelMapper modelMapper;
+	
+	@Before
+	public void setup() {
+		MockitoAnnotations.initMocks(service);
+	}
+	
+	@Test
+	public void create_payment_link_success() throws Exception {
+		OfflinePaymentRequest createRequest = OfflinePaymentFactory.createPaymentLinkRequest();
+		OfflinePaymentResponse createResponse = OfflinePaymentFactory.createPaymentLinkResponse();
+		//mock response
+		when(service.createPaymentLink(createRequest)).thenReturn(createResponse);
+		//actual response
+		ResponseEntity<OfflinePaymentResponse>  actualResponse = controller.processCreatePaymentLink(createRequest);
+		assertEquals(MessageCodes.SUCCESS,actualResponse.getBody().getStatus());
+		assertEquals(MessageCodes.OFFLINE_CREATE_LINK_SUCCESS,actualResponse.getBody().getStatusMessage().getDescription());
+	}
+
+	
+	@Test
+	public void cancel_payment_link_success() throws Exception {
+		OfflinePaymentRequest cancelRequest = OfflinePaymentFactory.cancelPaymentLinkRequest();
+		OfflinePaymentResponse cancelResponse = OfflinePaymentFactory.cancelPaymentLinkResponse();
+		//mock response
+		when(service.cancelPaymentLink(cancelRequest)).thenReturn(cancelResponse);
+		//actual response
+		ResponseEntity<OfflinePaymentResponse>  actualResponse = controller.processCancelPaymentLink(cancelRequest);
+		assertEquals(MessageCodes.SUCCESS,actualResponse.getBody().getStatus());
+		assertEquals(MessageCodes.OFFLINE_CANCEL_LINK_SUCCESS,actualResponse.getBody().getStatusMessage().getDescription());
+	}
+	
+	@Test
+	public void resend_payment_link_success() throws Exception {
+		OfflinePaymentRequest resendRequest = OfflinePaymentFactory.resendPaymentLinkRequest();
+		OfflinePaymentResponse resendResponse = OfflinePaymentFactory.resendPaymentLinkResponse();
+		//mock response
+		when(service.resendPaymentLink(resendRequest)).thenReturn(resendResponse);
+		//actual response
+		ResponseEntity<OfflinePaymentResponse>  actualResponse = controller.processResendPaymentLink(resendRequest);
+		assertEquals(MessageCodes.SUCCESS,actualResponse.getBody().getStatus());
+		assertEquals(MessageCodes.OFFLINE_RESEND_LINK_SUCCESS,actualResponse.getBody().getStatusMessage().getDescription());
+	}
+	
+	@Test
+	public void payment_mode_success() throws Exception {
+		OfflinePaymentRequest paymentModeRequest = OfflinePaymentFactory.paymentModeRequest();
+		OfflinePaymentResponse paymentModeResponse = OfflinePaymentFactory.paymentModeResponse();
+		//mock response
+		when(service.paymentMode(paymentModeRequest)).thenReturn(paymentModeResponse);
+		//actual response
+		ResponseEntity<OfflinePaymentResponse>  actualResponse = controller.processPaymentMethod(paymentModeRequest);
+		assertEquals(MessageCodes.SUCCESS,actualResponse.getBody().getStatus());
+		assertEquals(MessageCodes.RECORDS_FOUND_MSG_DESC,actualResponse.getBody().getStatusMessage().getDescription());
+		assertEquals("F-888777",actualResponse.getBody().getBookingId());
+		assertEquals("CARD",actualResponse.getBody().getPaymentDetails().get(0).getMode());
+		
+	}	
+	
+	@Test
+	public void update_payment_details_success() throws Exception {
+		OfflinePaymentRequest updatePaymentRequest = OfflinePaymentFactory.updatePaymentDetailsRequest();
+		OfflinePaymentResponse updatePaymentResponse = OfflinePaymentFactory.updatePaymentDetailsResponse();
+		//mock response
+		when(service.modifyPaymentDetails(updatePaymentRequest)).thenReturn(updatePaymentResponse);
+		//actual response
+		ResponseEntity<OfflinePaymentResponse>  actualResponse = controller.processModifyPaymentDetails(updatePaymentRequest);
+		assertEquals(MessageCodes.SUCCESS,actualResponse.getBody().getStatus());
+		assertEquals(MessageCodes.PAYMENT_DETAILS_UPDATE,actualResponse.getBody().getStatusMessage().getDescription());
+		assertEquals("2000",actualResponse.getBody().getPaymentDetails().get(0).getTxnValue());
+	}	
+	
+	
+	
+	@Test
+	public void txn_details_success() throws Exception {
+		OfflinePaymentRequest txnDetailsRequest = OfflinePaymentFactory.txnDetailsRequest();
+		OfflinePaymentResponse txnDetailsResponse = OfflinePaymentFactory.txnDetailsResponse();
+		//mock response
+		when(service.processTxnDetails(txnDetailsRequest)).thenReturn(txnDetailsResponse);
+		//actual response
+		ResponseEntity<OfflinePaymentResponse>  actualResponse = controller.processTxnDetails(txnDetailsRequest);
+		assertEquals(MessageCodes.SUCCESS,actualResponse.getBody().getStatus());
+		assertEquals(MessageCodes.RECORDS_FOUND_MSG_DESC,actualResponse.getBody().getStatusMessage().getDescription());
+		assertEquals("F-888777",actualResponse.getBody().getBookingId());
+		assertEquals("CARD",actualResponse.getBody().getPaymentDetails().get(0).getMode());
+		assertEquals("system@goomo.com",actualResponse.getBody().getPaymentDetails().get(0).getCreatedBy());
+		assertEquals("system@goomo.com",actualResponse.getBody().getPaymentDetails().get(0).getEmail());
+		assertEquals("Test",actualResponse.getBody().getPaymentDetails().get(0).getInternalNotes());
+	}	
+	
+	
+	
+	@Test
+	public void txn_details_offline_reference_success() throws Exception {
+		OfflinePaymentRequest txnDetailsRequest = OfflinePaymentFactory.txnDetailsRequest();
+		OfflinePaymentResponse txnDetailsResponse = OfflinePaymentFactory.txnDetailsResponse();
+		//mock response
+		when(service.processTxnDetails(txnDetailsRequest)).thenReturn(txnDetailsResponse);
+		//actual response
+		ResponseEntity<OfflinePaymentResponse>  actualResponse = controller.processTxnDetails(txnDetailsRequest);
+		assertEquals(MessageCodes.SUCCESS,actualResponse.getBody().getStatus());
+		assertEquals(MessageCodes.RECORDS_FOUND_MSG_DESC,actualResponse.getBody().getStatusMessage().getDescription());
+		assertEquals("F-888777",actualResponse.getBody().getBookingId());
+		assertEquals("CARD",actualResponse.getBody().getPaymentDetails().get(0).getMode());
+		assertEquals("system@goomo.com",actualResponse.getBody().getPaymentDetails().get(0).getCreatedBy());
+		assertEquals("system@goomo.com",actualResponse.getBody().getPaymentDetails().get(0).getEmail());
+		assertEquals("Test",actualResponse.getBody().getPaymentDetails().get(0).getInternalNotes());
+	}	
+	
+	
+	@Test
+	public void txn_details_status_success() throws Exception {
+		OfflinePaymentRequest txnDetailsRequest = OfflinePaymentFactory.txnDetailsRequest();
+		OfflinePaymentResponse txnDetailsResponse = OfflinePaymentFactory.txnDetailsResponse();
+		//mock response
+		when(service.processTxnDetails(txnDetailsRequest)).thenReturn(txnDetailsResponse);
+		//actual response
+		ResponseEntity<OfflinePaymentResponse>  actualResponse = controller.processTxnDetails(txnDetailsRequest);
+		assertEquals(MessageCodes.SUCCESS,actualResponse.getBody().getStatus());
+		assertEquals(MessageCodes.RECORDS_FOUND_MSG_DESC,actualResponse.getBody().getStatusMessage().getDescription());
+		assertEquals("F-888777",actualResponse.getBody().getBookingId());
+		assertEquals("CARD",actualResponse.getBody().getPaymentDetails().get(0).getMode());
+		assertEquals("system@goomo.com",actualResponse.getBody().getPaymentDetails().get(0).getCreatedBy());
+		assertEquals("system@goomo.com",actualResponse.getBody().getPaymentDetails().get(0).getEmail());
+		assertEquals("Test",actualResponse.getBody().getPaymentDetails().get(0).getInternalNotes());
+	}
+	
+	@Test
+	public void receipt_check_success() throws Exception {
+		OfflinePaymentRequest txnDetailsRequest = OfflinePaymentFactory.txnDetailsRequest();
+		OfflinePaymentResponse checkReceiptResponse = OfflinePaymentFactory.checkReceiptResponse();
+		//mock response
+		when(service.processCheckReceipt(txnDetailsRequest)).thenReturn(checkReceiptResponse);
+		//actual response
+		ResponseEntity<OfflinePaymentResponse>  actualResponse = controller.processCheckReceipt(txnDetailsRequest);
+		assertEquals(MessageCodes.SUCCESS,actualResponse.getBody().getStatus());
+		assertEquals(MessageCodes.RECEIPT_NOT_FOUND,actualResponse.getBody().getStatusMessage().getDescription());
+	}
+	
+	@Test
+	public void health_check_success() throws Exception {
+		ResponseEntity<BaseResponse>  actualResponse = controller.healthCheck();
+		assertEquals(MessageCodes.SUCCESS_MSG,actualResponse.getBody().getStatusMessage().getCode());
+		assertEquals(MessageCodes.HEALTH_CHECK_RES_DESC,actualResponse.getBody().getStatusMessage().getDescription());
+	}	
+	
+	
+	
+}
+*/
+
