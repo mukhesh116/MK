@@ -1,0 +1,307 @@
+/*package com.goomo.offline.payment.test;
+
+import java.text.ParseException;
+import java.util.Collections;
+import java.util.Date;
+
+import com.goomo.offline.constants.MessageCodes;
+import com.goomo.offline.entity.OfflinePaymentMaster;
+import com.goomo.offline.entity.OfflineTransactionMaster;
+import com.goomo.offline.io.OfflinePaymentModel;
+import com.goomo.offline.io.OfflinePaymentRequest;
+import com.goomo.offline.io.OfflinePaymentResponse;
+import com.goomo.offline.io.OfflineTransactionModel;
+import com.goomo.offline.io.StatusMessage;
+
+public class OfflinePaymentFactory {
+
+	--------------------------------------------Controller Starts--------------------------------------
+	
+	//Create API
+	public static OfflinePaymentRequest createPaymentLinkRequest() {
+		return OfflinePaymentRequest.builder().bookingId("F-888777")
+				.bookingValue("200000").createdBy("system@goomo.com").currency("INR")
+				.email("system@goomo.com").internalNotes("test").isEmail("Y").isExpiry("Y").expiryDate("2019-10-10").isSMS("Y")
+				.mobileNumber("8548005324").offlineReference("87e0f913-6560-4584-8cf3-524d839daed7")
+				.mode("CARD").partialPaymentFlag("Y").paymentDesc("Test").productType("FLIGHTS")
+				.receiptNo("888777").
+				txnChannel("B2C").
+				build();
+	}
+	
+	public static OfflinePaymentResponse createPaymentLinkResponse() {
+		return 	OfflinePaymentResponse.builder().status(MessageCodes.SUCCESS).
+				statusMessage(new StatusMessage(MessageCodes.SUCCESS_MSG, MessageCodes.OFFLINE_CREATE_LINK_SUCCESS)).
+				build();
+	}
+	
+	
+	//Cancel API
+	public static OfflinePaymentRequest cancelPaymentLinkRequest() {
+		return OfflinePaymentRequest.builder().bookingId("F-888777").offlineReference("9712307230123").
+				updatedBy("sasikumar.chinnamuthu@goomo.com").
+				requestedBy("CLIENT").
+				emailReference("ew234324n").
+				offlineReference("3sdf2213").
+				channelType("B2C").
+				bookingValue("2000").
+				amountPaid("1000").
+				build();
+	}
+	
+	public static OfflinePaymentResponse cancelPaymentLinkResponse() {
+		return  OfflinePaymentResponse.builder().
+				status(MessageCodes.SUCCESS).
+				statusMessage(new StatusMessage(MessageCodes.SUCCESS_MSG, MessageCodes.OFFLINE_CANCEL_LINK_SUCCESS)).
+				build();
+	}
+	
+	
+	//Resend API
+	public static OfflinePaymentRequest resendPaymentLinkRequest() {
+		return OfflinePaymentRequest.builder().bookingId("F-888777").
+				offlineReference("9712307230123").
+				emailReference("ew234324n").
+				channelType("B2C").
+				requestedBy("CLIENT").
+				build();
+	}
+	
+	public static OfflinePaymentResponse resendPaymentLinkResponse() {
+		return  OfflinePaymentResponse.builder().
+				status(MessageCodes.SUCCESS).
+				statusMessage(new StatusMessage(MessageCodes.SUCCESS_MSG, MessageCodes.OFFLINE_RESEND_LINK_SUCCESS)).
+				build();
+	}
+	
+	//PaymentDetails
+	public static OfflinePaymentRequest paymentModeRequest() {
+		return OfflinePaymentRequest.builder().bookingId("F-888777").offlineReference("9712307230123").
+				txnValue("1000").
+				refundTxnValue("1000").
+				paymentStatus("APPROVED").
+				requestedBy("CLIENT").
+				emailReference("ew234324n").
+				offlineReference("3sdf2213").
+				channelType("B2C").
+				productType("OFFLINE").
+				receiptNo("SE12213").
+				build();
+	}
+	
+	public static OfflinePaymentResponse paymentModeResponse() {
+		return OfflinePaymentResponse.builder().status(MessageCodes.SUCCESS).
+				statusMessage(new StatusMessage(MessageCodes.SUCCESS_MSG, MessageCodes.RECORDS_FOUND_MSG_DESC)).
+				bookingId("F-888777").
+				mode("NB").
+				amountPaid("1000").
+				refundAmount("1000").
+				paymentDetails(Collections.singletonList(createResponseModel())).
+				build();
+	}
+	
+	//TxnDetails
+	public static OfflinePaymentRequest txnDetailsRequest() {
+		return OfflinePaymentRequest.builder().
+				bookingId("F-888777").
+				build();
+	}
+	
+	public static OfflinePaymentResponse txnDetailsResponse() {
+		return OfflinePaymentResponse.builder().
+				status(MessageCodes.SUCCESS).
+				statusMessage(new StatusMessage(MessageCodes.SUCCESS_MSG, MessageCodes.RECORDS_FOUND_MSG_DESC)).
+				bookingId("F-888777").
+				mode("NB").
+				amountPaid("Yes").
+				statusMessage(new StatusMessage(MessageCodes.SUCCESS_MSG, MessageCodes.RECORDS_FOUND_MSG_DESC)).
+				transactions(null).
+				paymentDetails(Collections.singletonList(createResponseModel())).
+				build();
+	}
+	
+	public static OfflinePaymentResponse checkReceiptResponse() {
+		return OfflinePaymentResponse.builder().status(MessageCodes.SUCCESS) 
+				.statusMessage(new StatusMessage(MessageCodes.SUCCESS_MSG, MessageCodes.RECEIPT_NOT_FOUND)).build();
+	}
+	
+	//update payment details
+	public static OfflinePaymentRequest updatePaymentDetailsRequest() {
+		return OfflinePaymentRequest.builder().bookingId("F-888777").offlineReference("9712307230123").mode("NB").txnValue("1000").build();
+	}
+	
+	public static OfflinePaymentResponse updatePaymentDetailsResponse() {
+		return OfflinePaymentResponse.builder().status(MessageCodes.SUCCESS).
+				statusMessage(new StatusMessage(MessageCodes.SUCCESS_MSG, MessageCodes.PAYMENT_DETAILS_UPDATE)).
+				bookingId("F-888777").
+				mode("NB").
+				paymentDetails(Collections.singletonList(createResponseModel())).
+				build();
+	}
+	
+	
+	//update refund details
+	public static OfflinePaymentRequest updateRefundDetailsRequest() {
+		return OfflinePaymentRequest.builder().bookingId("F-888777").offlineReference("9712307230123").refundTxnValue("1000").build();
+	}
+	
+	public static OfflinePaymentResponse updateRefundDetailsResponse() {
+		return OfflinePaymentResponse.builder().status(MessageCodes.SUCCESS).
+				statusMessage(new StatusMessage(MessageCodes.SUCCESS_MSG, MessageCodes.PAYMENT_DETAILS_UPDATE)).
+				bookingId("F-888777").refundAmount("2000").build();
+				
+	}
+	
+	--------------------------------------------Controller End--------------------------------------
+	
+	
+	--------------------------------------------Service Starts--------------------------------------
+	
+	public static OfflinePaymentMaster createRequestEntity() {
+		return OfflinePaymentMaster.builder().
+				paymentLinkStatus("A").
+				paymentLink("https://www.goomo.com/offline/payment/87e0f913-6560-4584-8cf3-524d839daed7").
+				build();
+	} 
+
+	public static OfflinePaymentModel createResponseModel() {
+		return OfflinePaymentModel.builder()
+				.bookingValue(("200000")).createdBy("system@goomo.com").currency("INR")
+				.email("system@goomo.com").internalNotes("Test").isEmail("Y").isExpiry("Y").expiryDate("2019-10-10").isSMS("Y")
+				.mobileNumber("8548005324").offlineReference("87e0f913-6560-4584-8cf3-524d839daed7")
+				.mode("CARD").partialPaymentFlag("Y").paymentDesc("Test").productType("FLIGHTS")
+				.receiptNo("888777").paymentLink("https://www.goomo.com/offline/payment/87e0f913-6560-4584-8cf3-524d839daed7").
+				paymentLinkStatus("A").
+				amountPaid("1000").
+				createdBy("system@goomo.com").
+				txnValue("2000").
+				status("APPROVED").
+				build();
+	}
+	
+	public static OfflinePaymentMaster createResponseEntity() throws ParseException {
+		return OfflinePaymentMaster.builder()
+				.bookingValue(("200000")).createdBy("system@goomo.com").currency("INR")
+				.email("system@goomo.com").internalNotes("test").isEmail("Y").isExpiry("Y").expiryDate("2019-10-10").isSMS("Y")
+				.mobileNumber("8548005324").offlineReference("87e0f913-6560-4584-8cf3-524d839daed7")
+				.mode("CARD").partialPaymentFlag("Y").paymentDesc("Test").productType("FLIGHTS")
+				.receiptNo("888777").paymentLink("https://www.goomo.com/offline/payment/87e0f913-6560-4584-8cf3-524d839daed7").
+				paymentLinkStatus("A").
+				amountPaid("1000").
+				status("APPROVED").
+				createAt(new Date()).
+				build();
+	} 
+	
+	public static OfflineTransactionMaster createTransactionWithDataResponseEntity() throws ParseException {
+		return OfflineTransactionMaster.builder().
+				bookingId("OP-913SADSAD").
+				createAt(new Date()).
+				createdBy("system@goomo.com").
+				Id(Long.parseLong("10")).
+				offlineReference("0324324").
+				pesTxnUniqueId("098023").
+				txnType("PAYMENT").
+				txnValue("1000").
+				build();
+	} 
+	
+	public static OfflineTransactionModel createTransactionWithDataResponseModel() throws ParseException {
+		return OfflineTransactionModel.builder().
+				bookingId("OP-913SADSAD").
+				createAt(new Date()).
+				createdBy("system@goomo.com").
+				pesTxnUniqueId("098023").
+				txnType("PAYMENT").
+				pesTxnValue("1000").
+				build();
+	} 
+	
+	public static OfflineTransactionMaster createTransactionResponseEntity() {
+		return OfflineTransactionMaster.builder().
+				build();
+	} 
+	
+	public static OfflinePaymentMaster findByRequestEntity() {
+		return OfflinePaymentMaster.builder().
+				offlineReference("62178121221432").
+				build();
+	} 
+
+	
+	public static OfflinePaymentMaster findByResponseEntity() {
+		return OfflinePaymentMaster.builder().
+				paymentLinkStatus("A").
+				mode("NB").
+				bookingValue("2000").
+				amountPaid("1000").
+				offlineReference("9712307230123").
+				paymentLink("https://www.goomo.com/offline/payment/87e0f913-6560-4584-8cf3-524d839daed7").
+				//status(PaymentStatus.CANCELLED.getStatus()).
+				isSMS("N").
+				isEmail("N").
+				build();
+	}
+	
+	public static OfflinePaymentResponse cancelPaymentEntityResponse() {
+		return  OfflinePaymentResponse.builder().
+				status(MessageCodes.SUCCESS).
+				statusMessage(new StatusMessage(MessageCodes.SUCCESS_MSG, MessageCodes.OFFLINE_CANCEL_LINK_SUCCESS)).
+				build();
+	}
+		
+	--------------------------------------------Service Ends--------------------------------------
+	
+	
+	--------------------------------------------DAO Starts--------------------------------------
+	
+	public static OfflinePaymentMaster findByStatusEntity() {
+		return OfflinePaymentMaster.builder().
+				status("Paid").
+				build();
+	} 
+	
+	public static OfflinePaymentResponse createTransactioEntity() {
+		return OfflinePaymentResponse.builder().bookingId("F-888777").
+				//createdBy("system@goomo.com").
+				currency("INR")
+				.email("system@goomo.com").internalNotes("test").isEmail("Y").isExpiry("Y").expiryDate("2019-10-10").isSMS("Y")
+				.mobileNumber("8548005324").offlineReference("87e0f913-6560-4584-8cf3-524d839daed7")
+				.mode("CARD").partialPaymentFlag("Y").paymentDesc("Test").pgType("OFFLINE").productType("FLIGHTS")
+				.receiptNo("888777").paymentLink("https://www.goomo.com/offline/payment/87e0f913-6560-4584-8cf3-524d839daed7").
+				paymentLinkStatus("A").
+				build();
+	} 
+	
+	public static OfflinePaymentMaster updatePaymentDetailsResponseEntity() {
+		return OfflinePaymentMaster.builder()
+				.bookingValue(("200000")).createdBy("system@goomo.com").currency("INR")
+				.email("system@goomo.com").internalNotes("test").isEmail("Y").isExpiry("Y").expiryDate("2019-10-10").isSMS("Y")
+				.mobileNumber("8548005324").offlineReference("87e0f913-6560-4584-8cf3-524d839daed7")
+				.mode("CARD").partialPaymentFlag("Y").paymentDesc("Test").productType("FLIGHTS")
+				.receiptNo("888777").paymentLink("https://www.goomo.com/offline/payment/87e0f913-6560-4584-8cf3-524d839daed7").
+				paymentLinkStatus("A").
+				amountPaid("2000").
+				build();
+	} 
+	
+	public static OfflinePaymentMaster updateRefundResponseEntity() {
+		return OfflinePaymentMaster.builder()
+				.bookingValue(("200000")).createdBy("system@goomo.com").currency("INR")
+				.email("system@goomo.com").internalNotes("test").isEmail("Y").isExpiry("Y").expiryDate("2019-10-10").isSMS("Y")
+				.mobileNumber("8548005324").offlineReference("87e0f913-6560-4584-8cf3-524d839daed7")
+				.mode("CARD").partialPaymentFlag("Y").paymentDesc("Test").productType("FLIGHTS")
+				.receiptNo("888777").paymentLink("https://www.goomo.com/offline/payment/87e0f913-6560-4584-8cf3-524d839daed7").
+				paymentLinkStatus("A").
+			//	refundAmount("2000").
+				build();
+	} 
+	--------------------------------------------DAO Ends--------------------------------------
+}
+
+
+
+
+
+
+*/
