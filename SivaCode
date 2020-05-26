@@ -1,0 +1,220 @@
+package com.capitalone.dsd.identity.insights.service.dao;
+
+import com.capitalone.chassis.engine.annotations.logging.Log;
+import com.capitalone.chassis.engine.annotations.logging.Profile;
+import com.capitalone.chassis.engine.model.exception.ChassisBusinessException;
+import com.capitalone.dsd.identity.insights.convert.response.Feature;
+import com.capitalone.dsd.identity.insights.convert.response.FeatureInsightsEventDBMapper;
+import com.capitalone.dsd.identity.insights.model.v3.AggregatedInsightDetailsRequest;
+import com.capitalone.dsd.identity.insights.model.v3.AggregationInsightsResponse;
+import com.capitalone.dsd.identity.insights.model.v3.FeatureInsights;
+import com.capitalone.dsd.identity.insights.model.v3.ModelAggregationResponse;
+import com.capitalone.dsd.identity.insights.service.util.ApplicationConstants;
+import com.capitalone.dsd.identity.insights.service.validator.FeatureInsightsValidator;
+import com.datastax.driver.core.BoundStatement;
+import com.datastax.driver.core.PreparedStatement;
+import com.datastax.driver.core.ResultSet;
+import com.datastax.driver.core.Session;
+import com.datastax.driver.mapping.Mapper;
+import com.datastax.driver.mapping.Result;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.json.simple.JSONObject;
+import org.springframework.beans.factory.annotation.Value;
+
+import javax.inject.Inject;
+import javax.inject.Named;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneOffset;
+import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
+
+
+@Named
+@Profile
+@Log
+public class FeatureInsightsDaoImpl implements FeatureInsightsDao {
+
+    private static final Logger LOG = LogManager.getLogger(FeatureInsightsDaoImpl.class);
+    public static final String DAYS = "_DAYS";
+    private final boolean[] daysRange1_5 = {false};
+    private final boolean[] daysRange2_5 = {false};
+    private final boolean[] daysRange3_5 = {false};
+    private final boolean[] daysRange4_5 = {false};
+    @Inject
+    private CassandraConnection cassandraConnection;
+    @Inject
+    private FeatureInsightsValidator featureInsightsValidatorValidator;
+    @Value("#{${daysRangeValues}.range1}")
+    Integer daysRange1;
+    @Value("#{${daysRangeValues}.range2}")
+    Integer daysRange2;
+    @Value("#{${daysRangeValues}.range3}")
+    Integer daysRange3;
+    @Value("#{${daysRangeValues}.range4}")
+    Integer daysRange4;
+    @Value("#{${daysRangeValues}.range5}")
+    Integer daysRange5;
+
+    /**
+     * @param aggregatedInsightDetailsRequest
+     * @return
+     * @throws ParseException
+     * @throws JsonProcessingException
+     */
+    @Override
+    public AggregationInsightsResponse findFeatureInsightsAggregation(AggregatedInsightDetailsRequest aggregatedInsightDetailsRequest) throws ParseException, JsonProcessingException {
+        AggregationInsightsResponse aggregationInsightsResponse = new AggregationInsightsResponse();
+
+        List<FeatureInsights> featureInsightsList = aggregatedInsightDetailsRequest.getFeatureInsights();
+        featureInsightsValidatorValidator.getIpAddressValidation(featureInsightsList);
+
+        List<ModelAggregationResponse> list = new ArrayList<>();
+        List<FeatureInsightsEventDBMapper> featureResults = executeAggregationPrpareQuery(aggregatedInsightDetailsRequest.getProfileReferenceId().getSSOID());
+
+        for (FeatureInsights featureInsights : featureInsightsList) {
+            ModelAggregationResponse modelAggregationDetails = new ModelAggregationResponse();
+            String ipaddress = featureInsights.getAdditionalAttributes().get(0).getAttributeValue();
+            String featureType = featureInsightsValidatorValidator.validateFeatureType(featureInsights.getFeatureType());
+            modelAggregationDetails.setFeatureType(featureType);
+            List<FeatureInsightsEventDBMapper> featureDetails = featureResults.stream()
+                    .filter(f -> f.getFeatureType().equalsIgnoreCase(featureType))
+                    .collect(Collectors.toList());
+            try {
+                if (!featureDetails.isEmpty()) {
+                    if (!featureDetails.stream().noneMatch(row -> row.getFeatures().stream()
+                            .anyMatch(f -> f.getKey1().equalsIgnoreCase(ipaddress)))) {
+                        String jsonString = prepareJsonString(daysRange1_5[0], daysRange2_5[0], daysRange3_5[0], daysRange4_5[0]);
+                        modelAggregationDetails.setAggregationDetail(jsonString);
+                    } else {
+                        Predicate<Feature> predicate = p -> p.getKey1().equalsIgnoreCase(ipaddress);
+                        Map<Boolean, List<Feature>> map = featureDetails.stream().flatMap(mapper -> mapper.getFeatures().stream()).collect(Collectors.partitioningBy(predicate));
+                        setFilterTrueList(map.get(true), modelAggregationDetails);
+                    }
+                    list.add(modelAggregationDetails);
+                } else {
+                    String jsonString = prepareJsonString(false, false, false, false);
+                    modelAggregationDetails.setAggregationDetail(jsonString);
+                    list.add(modelAggregationDetails);
+                }
+            } catch (Exception ex) {
+                LOG.error(ex.getMessage(), ex.getStackTrace());
+                throw new ChassisBusinessException(ex);
+            }
+        }
+        aggregationInsightsResponse.setModelAggregationResponse(list);
+        return aggregationInsightsResponse;
+    }
+
+   /* private void setFilterTrueList(List<Feature> booleanList, ModelAggregationResponse modelAggregationDetails) {
+        DateRangeValues dateRangeValues = new DateRangeValues();
+        Map<String, Boolean> map = new HashMap<>();
+        booleanList.stream().forEach(i -> {
+            if (i.getKey1() != null) {
+                String timeStamp = i.getCreationtimestamp();
+                try {
+                    map.put(Boolean.toString(daysRange1_5[0]),ipAgeDateValidate(timeStamp, dateRangeValues.getDaysRange1(), dateRangeValues.getDaysRange5()));
+                    map.put(Boolean.toString(daysRange2_5[0]),ipAgeDateValidate(timeStamp, dateRangeValues.getDaysRange2(), dateRangeValues.getDaysRange5()));
+                    map.put(Boolean.toString(daysRange3_5[0]),ipAgeDateValidate(timeStamp, dateRangeValues.getDaysRange3(), dateRangeValues.getDaysRange5()));
+                    map.put(Boolean.toString(daysRange4_5[0]),ipAgeDateValidate(timeStamp, dateRangeValues.getDaysRange4(), dateRangeValues.getDaysRange5()));
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                    LOG.error(e.getMessage(), e.getStackTrace());
+                }
+            }
+            if (i.getKey1() == null) {
+                modelAggregationDetails.setAggregationDetail(null);
+            }
+            String jsonString = null;
+            try {
+                jsonString = prepareJsonString(map.get(daysRange1_5[0]), map.get(daysRange2_5[0]), map.get(daysRange3_5[0]), map.get(daysRange4_5[0]));
+            } catch (JsonProcessingException e) {
+                e.printStackTrace();
+            }
+            modelAggregationDetails.setAggregationDetail((jsonString));
+        });
+    }*/
+
+    private void setFilterTrueList(List<Feature> booleanList, ModelAggregationResponse modelAggregationDetails) {
+        List<String> lisDate = new ArrayList();
+        booleanList.stream().forEach(i -> {
+            lisDate.add(i.getCreationtimestamp());
+            if (i.getKey1() != null) {
+                String timeStamp = i.getCreationtimestamp();
+                try {
+                    if (!daysRange1_5[0]) {
+                        daysRange1_5[0] = ipAgeDateValidate(timeStamp, daysRange1, daysRange5);
+                    }
+                    if (!daysRange2_5[0]) {
+                        daysRange2_5[0] = ipAgeDateValidate(timeStamp, daysRange2, daysRange5);
+                    }
+                    if (!daysRange3_5[0]) {
+                        daysRange3_5[0] = ipAgeDateValidate(timeStamp, daysRange3, daysRange5);
+                    }
+                    if (!daysRange4_5[0]) {
+                        daysRange4_5[0] = ipAgeDateValidate(timeStamp, daysRange4, daysRange5);
+                    }
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                    LOG.error(e.getMessage(), e.getStackTrace());
+                }
+            }
+            if (i.getKey1() == null) {
+                modelAggregationDetails.setAggregationDetail(null);
+            }
+            String jsonString = null;
+            try {
+                jsonString = prepareJsonString(daysRange1_5[0], daysRange2_5[0], daysRange3_5[0], daysRange4_5[0]);
+            } catch (JsonProcessingException e) {
+                e.printStackTrace();
+            }
+            modelAggregationDetails.setAggregationDetail((jsonString));
+        });
+    }
+
+    private boolean ipAgeDateValidate(String givenDate, int start, int end) throws ParseException {
+        SimpleDateFormat dateFormatter = new SimpleDateFormat(ApplicationConstants.DATE_FORMAT);
+        Instant instantGivenDate = dateFormatter.parse(givenDate).toInstant();
+        LocalDateTime ldtGivenDate = LocalDateTime.ofInstant(instantGivenDate, ZoneOffset.UTC);
+        LocalDateTime ldtToday = LocalDateTime.now();
+        long noOfDays = Math.abs(ldtToday.until(ldtGivenDate, ChronoUnit.DAYS));
+        if (start < noOfDays && noOfDays <= end) {
+            LOG.info("Given date " + givenDate + "is in between " + start + " and " + end);
+            return true;
+        } else {
+            LOG.info("Date is out of scope");
+            return false;
+        }
+    }
+
+    private List<FeatureInsightsEventDBMapper> executeAggregationPrpareQuery(String ssoid) {
+        Session session = cassandraConnection.getSession();
+        PreparedStatement prepared = session.prepare(ApplicationConstants.FILTER_BY_SSO_IDAND_FEATURE);
+        BoundStatement bound = prepared.bind();
+        bound.setString(0, ssoid);
+        ResultSet resultSet = session.execute(bound);
+        Mapper<FeatureInsightsEventDBMapper> activityLogMapper = cassandraConnection.getMappingManager()
+                .mapper(FeatureInsightsEventDBMapper.class);
+        Result<FeatureInsightsEventDBMapper> result = activityLogMapper.map(resultSet);
+        return result.all();
+    }
+
+    private String prepareJsonString(boolean daysRange1_5, boolean daysRange2_5, boolean daysRange3_5, boolean daysRange4_5) throws JsonProcessingException {
+        JSONObject jsonObject = new JSONObject();
+        ObjectMapper mapper = new ObjectMapper();
+        jsonObject.put(ApplicationConstants.IP_OLDER_ + daysRange1 + DAYS, Boolean.toString(daysRange1_5));
+        jsonObject.put(ApplicationConstants.IP_OLDER_ + daysRange2 + DAYS, Boolean.toString(daysRange2_5));
+        jsonObject.put(ApplicationConstants.IP_OLDER_ + daysRange3 + DAYS, Boolean.toString(daysRange3_5));
+        jsonObject.put(ApplicationConstants.IP_OLDER_ + daysRange4 + DAYS, Boolean.toString(daysRange4_5));
+        return mapper.writeValueAsString(jsonObject);
+    }
+}
